@@ -7,10 +7,12 @@
 
 
 ### [Denoising Multipath Interference in Time-of-Flight Imaging](#3d-tof)
+[[Paper]](img/3d-tof/Denoising_3D_Time_Of_Flight_Data.pdf) [[Code]](https://github.com/daemonslayer/3d-tof-denoising)
 
-
+![](img/3d-tof/cnn.png)
 
 ### [Closing Prediction Markets without Ground Truth](#prediction-markets)
+[[Report]](img/prediction-market/CSE_290T_Final_Report__Project_Title.pdf)
 
 
 
