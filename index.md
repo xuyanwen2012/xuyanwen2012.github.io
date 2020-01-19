@@ -14,28 +14,53 @@
 ### [Closing Prediction Markets without Ground Truth](#prediction-markets)
 [[Report]](img/prediction-market/CSE_290T_Final_Report__Project_Title.pdf)
 
+![](img/prediction-market/augur.svg)
 
+---
 
 ## Games
 
 ### [Real-time ARPG Battle System](#mbbs)
+[[Video]](https://www.youtube.com/watch?v=ddu1r0sn4vo) [[Code]](https://github.com/xuyanwen2012/RMMV-Battle-System-JS)
 
+
+### [Legendary Warband]
+[[Video]](https://www.youtube.com/watch?v=2VEd8NKbcb4&t=11s) [[Code]](https://github.com/xuyanwen2012/XP-MBBS-7.0)
+
+
+![](img/xp-mbbs/1.png)
+![](img/xp-mbbs/2.png)
 
 ### [Alterrain](#alterrain)
+[[Code]](https://github.com/IDANIO/Alterrain)
 
+![](img/alterrain/map.gif)
+![](img/alterrain/1.gif)
+![](img/alterrain/2.gif)
 
 ### [Groundbreakers Origin](#groundbreakers)
+[[Code]](https://github.com/Groundbreakers/Groundbreakers)
 
+![](img/groundbreakers/1.png)
+![](img/groundbreakers/2.png)
+![](img/groundbreakers/3.png)
+![](img/groundbreakers/4.png)
+
+---
 
 ## Other Projects
 
 ### [Course Graph](#course-graph)
 
-### []
+![](img/course-graph/GIF.gif)
+![](img/course-graph/unnamed.gif)
 
-### 
-
+---
 
 ## Misc
 
+### 🎺ToyTracer
+
+![](img/toy-tracer/0.png)
+[[Code]](https://github.com/xuyanwen2012/ToyTracer)
 
