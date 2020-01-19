@@ -7,3 +7,11 @@ name                     : &name "Yanwen Xu"
 description              : &description "🎓 B.S. Double Major in Computer Science & Computer Game Design @ UCSC. Interested in Game Engines, Computer Graphics, and Artificial Intelligence."
 
 logo                     : "https://avatars1.githubusercontent.com/u/17172671?s=460&v=4"
+
+
+author:
+   name             : "Yanwen Xu"
+   avatar           : "https://avatars1.githubusercontent.com/u/17172671?s=460&v=4"
+   email            : "yxu83@ucsc.edu"
+   github           : "xuyanwen2012"
+   youtube          : "xuyanwen2012@gmail.com"
