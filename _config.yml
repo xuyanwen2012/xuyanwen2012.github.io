@@ -2,7 +2,8 @@ theme: jekyll-theme-minimal
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yanwen Xu / HomePage"
-title_separator          : "-"
+title                    : "Yanwen Xu"
 name                     : &name "Yanwen Xu"
 description              : &description "personal description"
+
+logo                     : "https://avatars1.githubusercontent.com/u/17172671?s=460&v=4"
