@@ -1,3 +1,13 @@
+## Current Researches
+
+### Pedestrian Behavior Simulation in Unreal Engine 4 
+
+> Currently studing Behavior Tree models to simulate pedestrian's behaviors in autonomous vehicles testing scenarios. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
+
+![](https://games.soe.ucsc.edu/sites/default/files/adl-banner-276x113.png)
+
+---
+
 ## Research Experiences
 
 ### Interactive Generative 3D Shapes
@@ -35,20 +45,20 @@
 ### Real-time ARPG Battle System
 [[Video]](https://www.youtube.com/watch?v=ddu1r0sn4vo) [[Code]](https://github.com/xuyanwen2012/RMMV-Battle-System-JS)
 
-
-> 
-
+> A highly-reputed Combat system written in JavaScript for RPG Maker MV, recieved overwhelmed positive feedbacks from the Community. The combat systems has altered the turn-based J-RPG combat system in traditional RPG Maker Game to real-time Action RPG.   
 
 ### Legendary Warband
 [[Video]](https://www.youtube.com/watch?v=2VEd8NKbcb4&t=11s) [[Code]](https://github.com/xuyanwen2012/XP-MBBS-7.0)
 
-> Award winning game series, Legendary Warband is a novel Action Rule-palying game made with RPG Maker Engine. In the game, player can lead and combat hundreds of units in real time. 
+> Award winning game series, Legendary Warband is a novel Action Rule-palying game made with RPG Maker Engine. In the game, player can lead and combat hundreds of units in real time. The system is programmed in Ruby, and I created my own pixel art assets.  
 
 ![](img/xp-mbbs/1.png)
 ![](img/xp-mbbs/2.png)
 
 ### Alterrain
 [[Code]](https://github.com/IDANIO/Alterrain)
+
+> An HTML5 Online Multiplayer exploration games, implemented with Node.js and WebSocket. The first Online Multiplayer game project made at UCSC for game design projects. Procedually generated terrain. 
 
 
 ![](img/alterrain/map.gif)
@@ -58,6 +68,7 @@
 ### Groundbreakers Origin
 [[Code]](https://github.com/Groundbreakers/Groundbreakers)
 
+> My undergraduate Capstone Project for my Game Design major. A rogue-like tower-defense RPG game with novel terrain-alteration mechanics. Developed in Unity with C#. Moreover, I developed editor plugins using OdinInspector to help our designers to create enemy easier.    
 
 ![](img/groundbreakers/1.png)
 ![](img/groundbreakers/2.png)
