@@ -2,7 +2,7 @@
 
 ### Pedestrian Behavior Simulation in Unreal Engine 4 
 
-> Currently studing Behavior Tree models to simulate pedestrian's behaviors in autonomous vehicles testing scenarios. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
+> Currently studying Behavior Tree models to simulate pedestrian's behaviors in autonomous vehicles testing scenarios. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
 
 ![](https://games.soe.ucsc.edu/sites/default/files/adl-banner-276x113.png)
 
