@@ -4,7 +4,8 @@
 
 > Currently studying Behavior Tree models to simulate pedestrian's behaviors in autonomous vehicles testing scenarios. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
 
-![](https://games.soe.ucsc.edu/sites/default/files/adl-banner-276x113.png)
+[[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
+
 
 ---
 
@@ -101,6 +102,16 @@
 
 ## Misc
 
+### 🌳 Featherweight Elm Interpreter in Rust
+[[Code]](https://github.com/xuyanwen2012/elm-rust)
+
+*Work in progress...*
+
+> An experimental lightweight interpreter for [Elm](https://elm-lang.org/) written in Rust. The project is inspired by the featherweight Elm language described in the original [Elm paper](https://elm-lang.org/assets/papers/concurrent-frp.pdf) by Evan Czaplicki. 
+
+![](https://avatars3.githubusercontent.com/u/20698192?s=200&v=4)
+
+
 ### 🎺ToyTracer
 [[Code]](https://github.com/xuyanwen2012/ToyTracer)
 
@@ -118,4 +129,3 @@
 
 
 ![](img/webgl/webgl.png)
-
