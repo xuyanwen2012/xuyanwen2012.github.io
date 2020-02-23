@@ -64,7 +64,6 @@
 
 ![](img/alterrain/map.gif)
 ![](img/alterrain/1.gif)
-![](img/alterrain/2.gif)
 
 ### Groundbreakers Origin
 [[Code]](https://github.com/Groundbreakers/Groundbreakers)
