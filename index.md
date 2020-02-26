@@ -6,6 +6,7 @@
 
 [[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
 
+#### Paper in Progress...
 
 ---
 
@@ -29,15 +30,6 @@
 
 
 ![](img/3d-tof/cnn.png)
-
-
-### Closing Prediction Markets without Ground Truth
-[[Report]](img/prediction-market/CSE_290T_Final_Report__Project_Title.pdf)
-
-
-> We show that the underlying contracts of any peer prediction marketare ultimately grounded in the behavior of the market itself (or closely related markets), and consider such marketsas global games. We review the successful, limited implementation of prediction markets in the trust-less setting ofcryptocurrency blockchains with Augur and highlight some of its limitations for our proposed setting. Finally, weconsider routes for adapting the “Bayesian Truth Serum” consensus mechanism for closing peer prediction marketsin incentive-compatible ways. 
-
-![](img/prediction-market/augur.svg)
 
 ---
 
