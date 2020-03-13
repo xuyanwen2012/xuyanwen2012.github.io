@@ -55,14 +55,12 @@
 
 
 ![](img/alterrain/map.gif)
-![](img/alterrain/1.gif)
 
 ### Groundbreakers Origin
 [[Code]](https://github.com/Groundbreakers/Groundbreakers)
 
 > My undergraduate Capstone Project for my Game Design major. A rogue-like tower-defense RPG game with novel terrain-alteration mechanics. Developed in Unity with C#. Moreover, I developed editor plugins using OdinInspector to help our designers to create enemy easier.    
 
-![](img/groundbreakers/1.png)
 ![](img/groundbreakers/2.png)
 ![](img/groundbreakers/3.png)
 ![](img/groundbreakers/4.png)
@@ -70,6 +68,14 @@
 ---
 
 ## Other Projects
+
+### 🌳 Featherweight Elm Interpreter in Rust
+[[Code]](https://github.com/xuyanwen2012/elm-rust)
+
+> An experimental lightweight interpreter for [Elm](https://elm-lang.org/) written in Rust. The project is inspired by the featherweight Elm language described in the original [Elm paper](https://elm-lang.org/assets/papers/concurrent-frp.pdf) by Evan Czaplicki. 
+
+![](img/elm-rust/elm.png)
+
 
 ### Exploring Chaos Destruction with Niagara Particle System in Unreal Engine 4
 [[Report]](img/chaos/Exploring_Chaos_Destruction_with_Niagara_Particle_System_in_Unreal_Engine_4.pdf) [[Video]](https://www.youtube.com/watch?time_continue=1&v=WnivTQNzUEw&feature=emb_logo)[[Code]](https://github.com/xuyanwen2012/ChaosProject)
@@ -86,22 +92,11 @@
 > Course Graph is a lightning-fast web application to search for your UCSC/UCSD courses. Course Graph is built with Server Side Rendering Technology, as well as React, Node.js and MongoDB.
 
 
-![](img/course-graph/GIF.gif)
 ![](img/course-graph/unnamed.gif)
 
 ---
 
 ## Misc
-
-### 🌳 Featherweight Elm Interpreter in Rust
-[[Code]](https://github.com/xuyanwen2012/elm-rust)
-
-*Work in progress...*
-
-> An experimental lightweight interpreter for [Elm](https://elm-lang.org/) written in Rust. The project is inspired by the featherweight Elm language described in the original [Elm paper](https://elm-lang.org/assets/papers/concurrent-frp.pdf) by Evan Czaplicki. 
-
-![](https://avatars3.githubusercontent.com/u/20698192?s=200&v=4)
-
 
 ### 🎺ToyTracer
 [[Code]](https://github.com/xuyanwen2012/ToyTracer)
