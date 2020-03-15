@@ -45,14 +45,14 @@
 ## Games
 
 ### Real-time ARPG Battle System
-[[Video]](https://www.youtube.com/watch?v=ddu1r0sn4vo) [[Code]](https://github.com/xuyanwen2012/RMMV-Battle-System-JS)
+[[YouTube Video]](https://www.youtube.com/watch?v=ddu1r0sn4vo) [[Code]](https://github.com/xuyanwen2012/RMMV-Battle-System-JS)
 
 > A highly-reputed Combat system written in JavaScript for RPG Maker MV, recieved overwhelmed positive feedbacks from the Community. The combat systems has altered the turn-based J-RPG combat system in traditional RPG Maker Game to real-time Action RPG.   
 
 ![](img/xp-mbbs/lw.png)
 
 ### Legendary Warband
-[[Video]](https://www.youtube.com/watch?v=2VEd8NKbcb4&t=11s) [[Code]](https://github.com/xuyanwen2012/XP-MBBS-7.0)
+[[YouTube Video]](https://www.youtube.com/watch?v=2VEd8NKbcb4&t=11s) [[Code]](https://github.com/xuyanwen2012/XP-MBBS-7.0)
 
 > Award winning game series, Legendary Warband is a novel Action Rule-palying game made with RPG Maker Engine. In the game, player can lead and combat hundreds of units in real time. The system is programmed in Ruby, and I created my own pixel art assets.  
 
