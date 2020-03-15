@@ -6,10 +6,15 @@
 
 [[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
 
+**Paper Submitted (3/14/2020)** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
+
+* Authors: Ishaan Paranjape, Abdul Jawad, **Yanwen Xu**, Asiiah Song, Jim Whitehead
+
+* Title: *A Modular Architecture for Procedural Generation of Towns, Intersections and Scenarios for Testing Autonomous Vehicles*
+
+
 ![](img/adl/architecture.png)
 
-
-#### Paper in Progress...
 
 
 ---
