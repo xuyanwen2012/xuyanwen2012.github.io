@@ -25,17 +25,17 @@
 [[Paper]](img/3d-shapes/paper_final.pdf) [[Slides]](img/3d-shapes/presentation.pdf) [[Code]](https://github.com/xuyanwen2012/interactive_generative_3d_shapes)
 
 
-> We re-implemented a recent study that introduced a novel, simple approach for effectively normalizing similarly shaped 3D meshes for machine learning applications. The parameterization algorithm can construct a triangle mesh efficiently and robustly with a consistent topology that is compactly parameterized as a height map, regardless of the mesh’s irregular format or non-uniform underlying structure. We leveraged the power of an autoencoder to explore the latent space behind the 3D shapes in the same category.
+> Implemented a shrink-wrap algorithmn from SIGGRAPH that can normalizes similarly shaped 3D meshes for machine learning applications. The parameterization algorithm construct height map regardless of the mesh’s irregular format. We leveraged the power of an autoencoder to explore the latent space behind the 3D shapes in the same category.
 
 
-![](img/3d-shapes/2.png)
+![](img/3d-shapes/3d-ml.gif)
 
 
 ### Denoising Multipath Interference in Time-of-Flight Imaging
 [[Paper]](img/3d-tof/Denoising_3D_Time_Of_Flight_Data.pdf) [[Code]](https://github.com/daemonslayer/3d-tof-denoising)
 
 
-> We propose a novel method for MPI noise removal usinga two-part convolutional neural network. The first model learns aboutthe core properties of the reflective objects in the scene, such as the re-flectively of the scene and local ambient light density. The second modellearns to map such properties along with a False Depth Map to create aTrue Depth Map of the scene. We demonstrate and validate our resultson synthetic dataset.
+> We propose a novel method for MPI noise removal usinga two-part convolutional neural network. The first model learns aboutthe core properties of the reflective objects in the scene, such as the re-flectively of the scene and local ambient light density. The second modellearns to map such properties along with a False Depth Map to create a True Depth Map of the scene. We demonstrate and validate our resultson synthetic dataset.
 
 
 ![](img/3d-tof/cnn.png)
