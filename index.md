@@ -73,7 +73,7 @@
 
 > My undergraduate Capstone Project for my Game Design major. A rogue-like tower-defense RPG game with novel terrain-alteration mechanics. Developed in Unity with C#. Moreover, I developed editor plugins using OdinInspector to help our designers to create enemy easier.    
 
-![](img/xp-mbbs/groundbreakers.gif)
+![](img/groundbreakers/groundbreakers.gif)
 
 ---
 
