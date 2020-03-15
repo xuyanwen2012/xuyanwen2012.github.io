@@ -64,7 +64,7 @@
 > An HTML5 Online Multiplayer exploration games, implemented with Node.js and WebSocket. The first Online Multiplayer game project made at UCSC for game design projects. Procedually generated terrain. 
 
 
-![](img/alterrain/map.gif)
+![](img/alterrain/idanio.gif)
 
 ### Groundbreakers Origin
 [[Code]](https://github.com/Groundbreakers/Groundbreakers)
@@ -86,10 +86,9 @@
 
 
 ### Exploring Chaos Destruction with Niagara Particle System in Unreal Engine 4
-[[Report]](img/chaos/Exploring_Chaos_Destruction_with_Niagara_Particle_System_in_Unreal_Engine_4.pdf) [[Video]](https://www.youtube.com/watch?time_continue=1&v=WnivTQNzUEw&feature=emb_logo)[[Code]](https://github.com/xuyanwen2012/ChaosProject)
+[[Report]](img/chaos/Exploring_Chaos_Destruction_with_Niagara_Particle_System_in_Unreal_Engine_4.pdf) [[Video]](https://www.youtube.com/watch?time_continue=1&v=WnivTQNzUEw&feature=emb_logo)[[Code]](https://github.com/xuyanwen2012/ChaosProject) [[Official Epic Blog post (On the way...)]]
 
-
-> In this work, we are interested in seeing how the Chaos physicssystem can be applied to traditional game development workflow inUnreal Engine. We created a space-setting scene that demonstratedthe aesthetic and robustness of massive destruction using Chaos.Furthermore, we expanded the scene and integrated it with the newNiagara Particle System and created a visually exciting scenariocinematic clips using Unreal Engine 4.23.
+> In this work, we explored the Chaos physics System in traditional game development workflow in Unreal Engine. We created a space-setting scene that demonstratedthe aesthetic and robustness of massive destruction using Chaos. 
 
 ![](img/chaos/1.png)
 
