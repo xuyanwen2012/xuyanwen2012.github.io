@@ -6,7 +6,7 @@
 
 [[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
 
-:clap::clap::clap: **(3/14/2020) Paper Submitted** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
+👏👏👏 **(3/14/2020) Paper Submitted** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
 
 * Authors: Ishaan Paranjape, Abdul Jawad, **Yanwen Xu**, Asiiah Song, Jim Whitehead
 
