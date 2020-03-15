@@ -48,7 +48,7 @@
 
 > A highly-reputed Combat system written in JavaScript for RPG Maker MV, recieved overwhelmed positive feedbacks from the Community. The combat systems has altered the turn-based J-RPG combat system in traditional RPG Maker Game to real-time Action RPG.   
 
-![](img/xp-mbbs/lw.png)
+<!-- ![](img/xp-mbbs/lw.png) -->
 
 ### Legendary Warband
 [[YouTube Video]](https://www.youtube.com/watch?v=2VEd8NKbcb4&t=11s) [[Code]](https://github.com/xuyanwen2012/XP-MBBS-7.0)
@@ -73,7 +73,7 @@
 
 > My undergraduate Capstone Project for my Game Design major. A rogue-like tower-defense RPG game with novel terrain-alteration mechanics. Developed in Unity with C#. Moreover, I developed editor plugins using OdinInspector to help our designers to create enemy easier.    
 
-![](groundbreakers.gif)
+![](img/xp-mbbs/groundbreakers.gif)
 
 ---
 
@@ -101,7 +101,9 @@
 > Course Graph is a lightning-fast web application to search for your UCSC/UCSD courses. Course Graph is built with Server Side Rendering Technology, as well as React, Node.js and MongoDB.
 
 
-![](img/course-graph/unnamed.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xuyanwen2012/xuyanwen2012.github.io/master/img/course-graph/unnamed.gif">
+</p>
 
 ---
 
