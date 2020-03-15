@@ -6,7 +6,7 @@
 
 [[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
 
-**Paper Submitted (3/14/2020)** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
+:clap::clap::clap: **(3/14/2020) Paper Submitted** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
 
 * Authors: Ishaan Paranjape, Abdul Jawad, **Yanwen Xu**, Asiiah Song, Jim Whitehead
 
@@ -14,7 +14,6 @@
 
 
 ![](img/adl/architecture.png)
-
 
 
 ---
@@ -63,8 +62,11 @@
 
 > An HTML5 Online Multiplayer exploration games, implemented with Node.js and WebSocket. The first Online Multiplayer game project made at UCSC for game design projects. Procedually generated terrain. 
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xuyanwen2012/xuyanwen2012.github.io/master/img/alterrain/idanio.gif">
+</p>
 
-![](img/alterrain/idanio.gif)
+<!-- ![](img/alterrain/idanio.gif) -->
 
 ### Groundbreakers Origin
 [[Code]](https://github.com/Groundbreakers/Groundbreakers)
