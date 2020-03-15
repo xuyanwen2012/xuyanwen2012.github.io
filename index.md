@@ -38,7 +38,7 @@
 > We propose a novel method for MPI noise removal usinga two-part convolutional neural network. The first model learns aboutthe core properties of the reflective objects in the scene, such as the re-flectively of the scene and local ambient light density. The second modellearns to map such properties along with a False Depth Map to create a True Depth Map of the scene. We demonstrate and validate our resultson synthetic dataset.
 
 
-![](img/3d-tof/cnn.png)
+![](img/3d-tof/3d-tof.png)
 
 ---
 
@@ -49,13 +49,14 @@
 
 > A highly-reputed Combat system written in JavaScript for RPG Maker MV, recieved overwhelmed positive feedbacks from the Community. The combat systems has altered the turn-based J-RPG combat system in traditional RPG Maker Game to real-time Action RPG.   
 
+![](img/xp-mbbs/lw.png)
+
 ### Legendary Warband
 [[Video]](https://www.youtube.com/watch?v=2VEd8NKbcb4&t=11s) [[Code]](https://github.com/xuyanwen2012/XP-MBBS-7.0)
 
 > Award winning game series, Legendary Warband is a novel Action Rule-palying game made with RPG Maker Engine. In the game, player can lead and combat hundreds of units in real time. The system is programmed in Ruby, and I created my own pixel art assets.  
 
-![](img/xp-mbbs/1.png)
-![](img/xp-mbbs/2.png)
+![](img/xp-mbbs/xp-mbbs.gif)
 
 ### Alterrain
 [[Code]](https://github.com/IDANIO/Alterrain)
@@ -70,9 +71,7 @@
 
 > My undergraduate Capstone Project for my Game Design major. A rogue-like tower-defense RPG game with novel terrain-alteration mechanics. Developed in Unity with C#. Moreover, I developed editor plugins using OdinInspector to help our designers to create enemy easier.    
 
-![](img/groundbreakers/2.png)
-![](img/groundbreakers/3.png)
-![](img/groundbreakers/4.png)
+![](groundbreakers.gif)
 
 ---
 
