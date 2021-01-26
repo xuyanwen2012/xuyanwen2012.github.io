@@ -23,7 +23,7 @@
 
 ### Pedestrian Simulation for Autonomous Vehicles Testing
 
-> Researched on behavior tree approaches and social force model in Unreal Engine to procedurally generate testing scenarios and dynamically spawning\nnavigation meshes for autonomous vehicles testing. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
+> Researched on behavior tree approaches and social force model in Unreal Engine to procedurally generate testing scenarios and dynamically spawning navigation meshes for autonomous vehicles testing. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
 
 [[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
 
@@ -41,7 +41,7 @@
 [[Paper]](img/3d-tof/Denoising_3D_Time_Of_Flight_Data.pdf) [[Code]](https://github.com/daemonslayer/3d-tof-denoising)
 
 
-> We propose a novel method for MPI noise removal usinga two-part convolutional neural network. The first model learns aboutthe core properties of the reflective objects in the scene, such as the re-flectively of the scene and local ambient light density. The second modellearns to map such properties along with a False Depth Map to create a True Depth Map of the scene. We demonstrate and validate our resultson synthetic dataset.
+> We propose a novel method for MPI noise removal using a two-part convolutional neural network. We demonstrate and validate our results on synthetic dataset.
 
 
 ![](img/3d-tof/3d-tof.png)
@@ -62,6 +62,7 @@
 [[Report]](img/chaos/Exploring_Chaos_Destruction_with_Niagara_Particle_System_in_Unreal_Engine_4.pdf) [[Video]](https://www.youtube.com/watch?time_continue=1&v=WnivTQNzUEw&feature=emb_logo)[[Code]](https://github.com/xuyanwen2012/ChaosProject) [[Official Epic Blog post (On the way...)]]
 
 > We explored the Chaos Physics System and created a space-setting scene that demonstrated the aesthetic and robustness of massive destruction using Chaos.
+
 ![](img/chaos/1.png)
 
 ### Course Graph
