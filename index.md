@@ -1,20 +1,12 @@
-## Current Researches
+## Publications
 
-### Pedestrian Behavior Simulation in Unreal Engine 4 
-
-> Currently studying Behavior Tree models to simulate pedestrian's behaviors in autonomous vehicles testing scenarios. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
-
-[[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
-
-👏👏👏 **(3/14/2020) Paper Submitted** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
+👏👏👏 **Paper Accepted** to 2020 IEEE Intelligent Vehicles Symposium (IV) (IV 2020). 
 
 * Authors: Ishaan Paranjape, Abdul Jawad, **Yanwen Xu**, Asiiah Song, Jim Whitehead
 
 * Title: *A Modular Architecture for Procedural Generation of Towns, Intersections and Scenarios for Testing Autonomous Vehicles*
 
-
 ![](img/adl/architecture.png)
-
 
 ---
 
@@ -24,10 +16,21 @@
 [[Paper]](img/3d-shapes/paper_final.pdf) [[Slides]](img/3d-shapes/presentation.pdf) [[Code]](https://github.com/xuyanwen2012/interactive_generative_3d_shapes)
 
 
-> Implemented a shrink-wrap algorithmn from SIGGRAPH that can normalizes similarly shaped 3D meshes for machine learning applications. The parameterization algorithm construct height map regardless of the mesh’s irregular format. We leveraged the power of an autoencoder to explore the latent space behind the 3D shapes in the same category.
+> Implemented a shrink-wrap algorithm from SIGGRAPH that can normalizes similarly shaped 3D meshes for machine learning applications. We leveraged the power of an Autoencoder to explore the latent space behind the 3D shapes in the same category.
 
 
 ![](img/3d-shapes/3d-ml.gif)
+
+### Pedestrian Simulation for Autonomous Vehicles Testing
+
+> Researched on behavior tree approaches and social force model in Unreal Engine to procedurally generate testing scenarios and dynamically spawning\nnavigation meshes for autonomous vehicles testing. Actively developing Unreal Plugins for [Augmented Design Lab](https://games.soe.ucsc.edu/adl) at UCSC. 
+
+[[PedestrianSim]](https://github.com/xuyanwen2012/PedestrianSim) [[Sumo2Unreal]](https://github.com/AugmentedDesignLab/Sumo2Unreal) 
+
+
+### 3D Interactive Dungeon Generation using SMT Solver
+
+> Defined dungeon generation problem as linear constraint problems. We proposed a practical pipeline for level designers to generate dungeons layouts efficiently.
 
 
 ### Denoising Multipath Interference in Time-of-Flight Imaging
@@ -38,6 +41,35 @@
 
 
 ![](img/3d-tof/3d-tof.png)
+
+---
+
+## Programming Projects
+
+### 🌳 Featherweight Elm Interpreter in Rust
+[[Code]](https://github.com/xuyanwen2012/elm-rust)
+
+> An experimental lightweight interpreter for [Elm](https://elm-lang.org/) written in Rust. The project is inspired by the featherweight Elm language described in the original [Elm paper](https://elm-lang.org/assets/papers/concurrent-frp.pdf) by Evan Czaplicki. 
+
+![](img/elm-rust/elm.png)
+
+
+### Exploring Chaos Destruction with Niagara Particle System in Unreal Engine 4
+[[Report]](img/chaos/Exploring_Chaos_Destruction_with_Niagara_Particle_System_in_Unreal_Engine_4.pdf) [[Video]](https://www.youtube.com/watch?time_continue=1&v=WnivTQNzUEw&feature=emb_logo)[[Code]](https://github.com/xuyanwen2012/ChaosProject) [[Official Epic Blog post (On the way...)]]
+
+> We explored the Chaos Physics System and created a space-setting scene that demonstrated the aesthetic and robustness of massive destruction using Chaos.
+![](img/chaos/1.png)
+
+### Course Graph
+[[Code]](https://github.com/coursegraph/CourseGraph)
+
+
+> Course Graph is a lightning-fast web application to search for your UCSC/UCSD courses. Course Graph is built with Server Side Rendering Technology, as well as React, Node.js and MongoDB.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xuyanwen2012/xuyanwen2012.github.io/master/img/course-graph/unnamed.gif">
+</p>
 
 ---
 
@@ -74,36 +106,6 @@
 > My undergraduate Capstone Project for my Game Design major. A rogue-like tower-defense RPG game with novel terrain-alteration mechanics. Developed in Unity with C#. Moreover, I developed editor plugins using OdinInspector to help our designers to create enemy easier.    
 
 ![](img/groundbreakers/groundbreakers.gif)
-
----
-
-## Other Projects
-
-### 🌳 Featherweight Elm Interpreter in Rust
-[[Code]](https://github.com/xuyanwen2012/elm-rust)
-
-> An experimental lightweight interpreter for [Elm](https://elm-lang.org/) written in Rust. The project is inspired by the featherweight Elm language described in the original [Elm paper](https://elm-lang.org/assets/papers/concurrent-frp.pdf) by Evan Czaplicki. 
-
-![](img/elm-rust/elm.png)
-
-
-### Exploring Chaos Destruction with Niagara Particle System in Unreal Engine 4
-[[Report]](img/chaos/Exploring_Chaos_Destruction_with_Niagara_Particle_System_in_Unreal_Engine_4.pdf) [[Video]](https://www.youtube.com/watch?time_continue=1&v=WnivTQNzUEw&feature=emb_logo)[[Code]](https://github.com/xuyanwen2012/ChaosProject) [[Official Epic Blog post (On the way...)]]
-
-> In this work, we explored the Chaos physics System in traditional game development workflow in Unreal Engine. We created a space-setting scene that demonstratedthe aesthetic and robustness of massive destruction using Chaos. 
-
-![](img/chaos/1.png)
-
-### Course Graph
-[[Code]](https://github.com/coursegraph/CourseGraph)
-
-
-> Course Graph is a lightning-fast web application to search for your UCSC/UCSD courses. Course Graph is built with Server Side Rendering Technology, as well as React, Node.js and MongoDB.
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/xuyanwen2012/xuyanwen2012.github.io/master/img/course-graph/unnamed.gif">
-</p>
 
 ---
 
