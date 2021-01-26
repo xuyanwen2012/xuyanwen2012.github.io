@@ -32,6 +32,8 @@
 
 > Defined dungeon generation problem as linear constraint problems. We proposed a practical pipeline for level designers to generate dungeons layouts efficiently.
 
+![](img/3d-dungeon-z3/slope1.png)
+
 
 ### Denoising Multipath Interference in Time-of-Flight Imaging
 [[Paper]](img/3d-tof/Denoising_3D_Time_Of_Flight_Data.pdf) [[Code]](https://github.com/daemonslayer/3d-tof-denoising)
