@@ -4,7 +4,7 @@ theme: jekyll-theme-minimal
 locale                   : "en-US"
 title                    : "Yanwen Xu"
 name                     : &name "Yanwen Xu"
-description              : &description "🎓 B.S. Double Major in Computer Science & Computer Game Design @ UCSC. Interested in Game Engines, Computer Graphics, and Artificial Intelligence."
+description              : &description "🎓 M.S. in Computer Science and Engineering @ UCSC. Former indie game developer. Interested in Game Engines, Computer Graphics, and Programming Languages."
 
 logo                     : "https://avatars1.githubusercontent.com/u/17172671?s=460&v=4"
 
