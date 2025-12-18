@@ -1,42 +1,22 @@
-name: Custom Zola Build and Deploy
+name: Deploy Zola Site to GitHub Pages (v0.21.0)
+
 on:
   push:
-    branches: ["main"]
-
-# Add these permissions so the Action can talk to the Pages API
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          submodules: 'recursive'
+          submodules: recursive
 
-      - name: Install and Run Zola
-        run: |
-          ZOLA_VERSION="v0.21.0"
-          wget https://github.com/getzola/zola/releases/download/$ZOLA_VERSION/zola-$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz
-          tar -xvf zola-$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz
-          sudo mv zola /usr/local/bin/
-          zola build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public # The folder Zola just built
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # This triggers the actual live update
+      - name: Build and Deploy
+        uses: shalzz/zola-deploy-action@v0.21.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
