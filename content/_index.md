@@ -13,7 +13,7 @@ template = "homepage.html"
     width: 300px;
     height: auto;
     object-fit: cover;
-    margin: 0 auto 0;
+    margin: 0 auto;
     display: block;
 }
 
@@ -26,7 +26,7 @@ template = "homepage.html"
 .homepage-hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-
+}
 </style>
 
 <div class="homepage-hero">
@@ -39,17 +39,14 @@ template = "homepage.html"
 
 # 👋 Hi
 
-I am a final year **Ph.D. candidate** in the Department of *Computer Science & Engineering* at University of California Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/).
+I am a final-year **Ph.D. candidate** in the Department of *Computer Science & Engineering* at the University of California, Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by Professor [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/).
 
-<!-- **My research interests** are in `heterogeneous computing`, `programming languages`, and `compilers`.  -->
-
-
-**My research interests** are in 
+**My research interests** include:
 * `heterogeneous computing`
 * `programming languages`
 * `compilers`
   
-I am especially interested in accelerating workloads on tightly-coupled CPU-accelerator (e.g., GPU/FPGA) systems, with the aim to enable the full potential of these types of systems. I also think programmers deserve better tools for developing heterogeneous applications; this fuels my exploration in developing novel compiler techniques and programming language features. You can view more in my [research projects](projects), and my [publications](publications).
+I am particularly interested in accelerating workloads on tightly coupled CPU-accelerator (e.g., GPU/FPGA) systems, with the aim of realizing the full potential of these architectures. I also believe that programmers deserve better tools for developing heterogeneous applications; this fuels my exploration of novel compiler techniques and programming language features. You can find more details in my [research projects](projects) and [publications](publications).
 
 ```c++
 struct Research {
@@ -64,37 +61,18 @@ struct Research {
 };
 ```
 
-Before starting my Ph.D., I was an `indie game developer`, and many of the game projects are shown in my [portfolio](games). Aside from academics, I am a competitive `fencing` (🤺) athlete and a certified fencing `coach` by *U.S. Institutions of Higher Education*. I earned my diploma of *Instructor at Arms in Foil* in the year 2022, and *Provost at Arms* in year 2025.
+<!-- Before starting my Ph.D., I was an `indie game developer`, and many of the game projects are shown in my [portfolio](games). Aside from academics, I am a competitive `fencing` (🤺) athlete and a certified fencing `coach` by *U.S. Institutions of Higher Education*. I earned my diploma of *Instructor at Arms in Foil* in the year 2022, and *Provost at Arms* in year 2025. -->
 
-<!-- # 📣 Latest News
-
-**2025**
-* **Oct** —  **Best Paper Award** @ **IISWC'25** for *BetterTogether*.
-* **Sep** —  Joined **Samsung Advanced Computing Lab** (Full-time).
-* **Aug** —  *BetterTogether* accepted for publication at **IISWC'25**.
-
-**2024**
-* **Apr** — Started Research Internship at **Mercedes-Benz R&D North America**.
-
-**2023**
-* **Jun** — Invited Talk: *Redwood* at **OSCAR’23**.
-* **May** — Advanced to **Ph.D. Candidacy**.
-* **Apr** — Conference Presentation: *Redwood* at **ISPASS’23**. -->
-
-<!-- # Latest News -->
+Before starting my Ph.D., I was an `indie game developer`, and many of my game projects are featured in my [portfolio](games). Aside from academia, I am a competitive `fencing` (🤺) athlete and a certified coach. I earned my *Instructor at Arms in Foil* diploma in 2022 and *Provost at Arms* in 2025.
 
 ---
 
 # 📣 Latest News
 
-
-* **Oct, 2025** - I presented **BetterTogether** at **IISWC'25**. Our work received the **Best Paper Award**! Nicely done team! 🏆
-* **Sep, 2025** - I joined **Samsung Advanced Computing Lab** full-time!
-* **Aug, 2025** - Our work **BetterTogether** was accepted to **IISWC'25**. Nice job team!
-* **Apr, 2024** - I started an internship at **Mercedes-Benz R&D North America**!
-* **May, 2023** - Successfully advanced to **Ph.D. Candidacy**! ✅
-* **Jun, 2023** - I gave a virtual talk on **Redwood** at OSCAR’23.
-* **Apr, 2023** - I presented **Redwood** at **ISPASS’23**!
-<!-- * **Feb 28, 2023:** Our paper on **Redwood** (heterogeneous tree traversal) is accepted to **ISPASS’23**! Thanks to Ang and Tyler! -->
-<!-- * **Oct 10, 2022:** I presented **Redwood** at the ACM Student Research Competition (SRC) for **PACT 2022**. -->
-<!-- * **Oct 05, 2025:** Our work **BetterTogether** received a Best Paper Nomination. -->
+* **Oct 2025** — I presented **BetterTogether** at **IISWC'25**. Our work received the **Best Paper Award**! 🏆
+* **Sep 2025** — I joined the **Samsung Advanced Computing Lab** full-time!
+* **Aug 2025** — Our work **BetterTogether** was accepted for publication at **IISWC'25**.
+* **Apr 2024** — I started a research internship at **Mercedes-Benz R&D North America**.
+* **May 2023** — Successfully advanced to **Ph.D. Candidacy**! ✅
+* **Jun 2023** — I gave a virtual talk on **Redwood** at OSCAR’23.
+* **Apr 2023** — I presented **Redwood** at **ISPASS’23**.

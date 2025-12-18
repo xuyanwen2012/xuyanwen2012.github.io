@@ -3,7 +3,7 @@ base_url = "https://xuyanwen2012.github.io"
 title = "Yanwen Xu"
 
 compile_sass = true
-build_search_index = true
+build_search_index = false
 
 [search]
 include_title = true
