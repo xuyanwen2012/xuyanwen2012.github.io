@@ -1,7 +1,7 @@
-name: Deploy Zola to Pages
+name: Deploy Zola
 on:
   push:
-    branches: ["master"] # Changed to match your current branch
+    branches: [main] # or master
   workflow_dispatch:
 
 permissions:
@@ -16,18 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: 'recursive' # Important if you use a Zola theme as a submodule
-
-      - name: Install Zola
-        run: |
-          ZOLA_VERSION="0.19.2" # Match this to your local version
-          wget https://github.com/getzola/zola/releases/download/v$ZOLA_VERSION/zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz
-          tar -xvf zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz
-          sudo mv zola /usr/local/bin/
-
-      - name: Build site
-        run: zola build
-
+          submodules: 'recursive'
+      - name: Build Zola
+        uses: shalzz/zola-deploy-action@v0.19.2
+        env:
+          # This builds the site but doesn't push to a branch yet
+          BUILD_ONLY: true 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
