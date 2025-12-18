@@ -1,19 +1,19 @@
-name: Deploy Zola to GitHub Pages
-on:
-  push:
-    branches:
-      - main
+# name: Deploy Zola to GitHub Pages
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: true
+# jobs:
+#   build_and_deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#         with:
+#           submodules: true
 
-      - name: Build and deploy
-        uses: shalzz/zola-deploy-action@v0.21.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Build and deploy
+#         uses: shalzz/zola-deploy-action@v0.21.0
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
