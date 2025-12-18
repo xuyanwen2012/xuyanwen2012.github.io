@@ -1,39 +1,22 @@
-name: Deploy Zola
+name: Deploy Zola to GitHub Pages
 on:
   push:
-    branches: [main] # or master
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main  # Change to 'master' if your main branch is named master
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: 'recursive'
-      - name: Build Zola
-        uses: shalzz/zola-deploy-action@v0.19.2
-        env:
-          # This builds the site but doesn't push to a branch yet
-          BUILD_ONLY: true 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+          submodules: true  # This ensures your themes are downloaded
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.21.0
+        env:
+          # Note: No need to create a secret; GITHUB_TOKEN is built-in
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: if you have a custom domain
+          # BUILD_FLAGS: --base-url https://yourdomain.com
