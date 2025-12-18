@@ -13,4 +13,43 @@
 
 {% block main_content %}
 {{ self::home_page(section=section) }}
+
+<style>
+.homepage-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-1);
+    line-height: 1.6;
+}
+
+.homepage-footer a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.homepage-footer a:hover {
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+}
+
+.homepage-footer .rust-emphasis {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+</style>
+
+<footer class="homepage-footer">
+    <p>
+        This site is built with <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a> 
+        (powered by <span class="rust-emphasis">Rust</span>) and the 
+        <a href="https://github.com/not-matthias/apollo" target="_blank" rel="noopener">Apollo</a> theme.
+    </p>
+    <p>
+        © 2025 All rights reserved.
+    </p>
+</footer>
 {% endblock main_content %}

@@ -65,6 +65,8 @@ struct Research {
 
 Before starting my Ph.D., I was an `indie game developer`, and many of my game projects are featured in my [portfolio](games). Aside from academia, I am a competitive `fencing` (🤺) athlete and a certified coach. I earned my *Instructor at Arms in Foil* diploma in 2022 and *Provost at Arms* in 2025.
 
+**BTW:** My favorite Linux distro is *Fedora*, my favorite DE is *XFCE4*, and my favorite processor is *AMD EPYC*.
+
 ---
 
 # 📣 Latest News

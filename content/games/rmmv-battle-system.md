@@ -1,6 +1,6 @@
 +++
 title = "[RPG Maker MV] Real-time ARPG Battle System Demo"
-description = "Learn how to create performant static websites using Zola, a Rust-powered static site generator that compiles your content in milliseconds."
+description = "A custom-built Action RPG (ARPG) combat engine developed within RPG Maker MV. My goal was to push the engine beyond its native turn-based roots and create a fluid, real-time combat experience directly on the exploration map."
 date = 2017-05-06
 
 [extra]
