@@ -27,7 +27,7 @@ menu = [
     { name = "/projects", url = "/projects", weight = 3 },
     { name = "/games", url = "/games", weight = 4 },
     { name = "/teaching", url = "/teaching", weight = 5 },
-    { name = "/cv", url = "/cv", weight = 6 },
+    { name = "/cv", url = "/cv.pdf", weight = 6 },
 ]
 
 socials = [

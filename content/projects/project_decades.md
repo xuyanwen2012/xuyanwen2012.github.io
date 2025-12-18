@@ -5,9 +5,9 @@ weight = 2
 date = 2023-05-01
 
 [extra]
-local_image = "decades_logo.png"
-github = "https://github.com/not-matthias/apollo"
-demo = "https://not-matthias.github.io/apollo"
+local_image = "decades.png"
+github = "https://github.com/angl-dev/gem5-duet/tree/Yanwen"
+demo = "https://decades.cs.princeton.edu/"
 tags = ["darpa", "fpga", "gem5"]
 +++
 

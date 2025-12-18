@@ -6,4 +6,6 @@ template = "cards.html"
 [extra]
 cards_columns = 2
 card_media_height = 250
+
+header_image = "/projects.png"
 +++

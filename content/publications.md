@@ -1,5 +1,8 @@
 +++
 template = "page.html"
+
+[extra]
+header_image = "/publications.png"
 +++
 
 # Publications

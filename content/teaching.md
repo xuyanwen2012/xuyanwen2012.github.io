@@ -1,5 +1,7 @@
 +++
 template = "page.html"
+[extra]
+header_image = "/teaching.png"
 +++
 
 # Teaching Experience
@@ -7,11 +9,11 @@ template = "page.html"
 **University of California, Santa Cruz**
 *Graduate Teaching Assistant*
 
-| Term | Course | Focus |
-| :--- | :--- | :--- |
-| **Spring 2025** | **CSE 110A** | Fundamentals of Compiler Design |
-| **Fall 2023** | **CSE 13S** | Computer Systems and C Programming |
-| **[Spring 2022](https://sorensenucsc.github.io/CSE110A-sp2022/)** | **CSE 110A** | Fundamentals of Compiler Design |
+| Term                                                              | Course       | Focus                              |
+| :---------------------------------------------------------------- | :----------- | :--------------------------------- |
+| **Spring 2025**                                                   | **CSE 110A** | Fundamentals of Compiler Design    |
+| **Fall 2023**                                                     | **CSE 13S**  | Computer Systems and C Programming |
+| **[Spring 2022](https://sorensenucsc.github.io/CSE110A-sp2022/)** | **CSE 110A** | Fundamentals of Compiler Design    |
 
 ---
 # Academic Services

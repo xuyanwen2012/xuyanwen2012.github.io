@@ -8,8 +8,18 @@ template = "homepage.html"
     padding: 2rem 0;
 }
 
+.homepage-hero-avatar {
+    border-radius: 50%;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto 0;
+    display: block;
+}
+
 .homepage-hero-title {
     font-size: 3rem;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -20,13 +30,14 @@ template = "homepage.html"
 </style>
 
 <div class="homepage-hero">
+    <img src="avartar.png" alt="Yanwen Xu" class="homepage-hero-avatar" />
     <h1 class="homepage-hero-title">Yanwen Xu</h1>
     <p class="homepage-hero-subtitle">Ph.D. Candidate in CSE @ UC Santa Cruz && GPU Engineer @ Samsung</p>
 </div>
 
 # 👋 Hi
 
-I am a final year **Ph.D. candidate** in the Department of [Computer Science & Engineering](https://engineering.ucsc.edu/departments/computer-science-and-engineering/) at University of California Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/).
+I am a final year **Ph.D. candidate** in the Department of *Computer Science & Engineering* at University of California Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/).
 
 **My research interests** are in `heterogeneous computing`, `programming languages`, and `compilers`. I am especially interested in accelerating workloads on tightly-coupled CPU-accelerator (e.g., GPU/FPGA) systems, with the aim to enable the full potential of these types of systems. I also think programmers deserve better tools for developing heterogeneous applications; this fuels my exploration in developing novel compiler techniques and programming language features.
 

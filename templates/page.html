@@ -4,6 +4,21 @@
 <div class="visible-element-observer-root" data-selector="main article p">
     <main>
         <article>
+            {% if page.extra.header_image %}
+                {% set header_image_path = page.extra.header_image %}
+                {% if header_image_path is not starting_with("/") %}
+                    {# For pages, use the page's directory path #}
+                    {% set page_dir = page.path | split(pat="/") | slice(end=-1) | join(sep="/") %}
+                    {% if page_dir %}
+                        {% set header_image_path = page_dir ~ "/" ~ page.extra.header_image %}
+                    {% else %}
+                        {% set header_image_path = "/" ~ page.extra.header_image %}
+                    {% endif %}
+                {% endif %}
+                <div class="page-header-image">
+                    <img src="{{ get_url(path=header_image_path) }}" alt="{{ page.title }}" />
+                </div>
+            {% endif %}
             <div class="title">
                 {#<h1 class="title">{{ page.title }}</h1>#}
                 {{ post_macros::page_header(title=page.title) }}
