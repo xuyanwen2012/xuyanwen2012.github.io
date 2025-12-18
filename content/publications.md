@@ -1,0 +1,31 @@
++++
+template = "page.html"
++++
+
+# Publications
+
+* **BetterTogether: An Interference-Aware Framework for Fine-grained Software Pipelining on Heterogeneous SoCs.**
+    * **Yanwen Xu**, R. Sharma, Z. Chen, S. Mistry, T. Sorensen
+    * *IEEE International Symposium on Workload Characterization ([IISWC](https://iiswc.org/iiswc2025/))*, 2025 **[Best Paper Award]**
+    * [[pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11242071)] [[slides](#)] [[code](https://github.com/ucsc-redwood/better-together)] [[DOI](https://ieeexplore.ieee.org/document/11242071)]
+
+* **Redwood: Flexible and Portable Heterogeneous Tree Traversal Workloads.**
+    * **Yanwen Xu**, A. Li, T. Sorensen
+    * *IEEE International Symposium on Performance Analysis of Systems and Software ([ISPASS](https://ispass.org/ispass2023/))*, 2023
+    * [[pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10158162)] [[slides](#)] [[code](https://github.com/ucsc-redwood/redwood-aio)] [[DOI](https://ieeexplore.ieee.org/document/10158162)]
+
+* **Evaluating Shared Memory Heterogeneous Systems Using Traverse-Compute Workloads.**
+    * **Yanwen Xu**, A. Li, T. Sorensen
+    * *Open-Source Computer Architecture Research ([OSCAR](https://oscar-workshop.github.io/Home_2023.html)) Workshop*, 2023
+    * [[slides](https://oscar-workshop.github.io/files/03_OSCAR2023-yanwenxu.pdf)] [[video](https://youtu.be/Ebvd9IFk1g8)] 
+
+* **REDwood: Heterogeneous Implementation of Tree Applications with Accelerated REDuctions.**
+    * **Yanwen Xu**, T. Sorensen
+    * *Parallel Architectures and Compilation Techniques ([PACT](https://pact22.cs.illinois.edu/)), ACM Student Research Competition*, 2022
+    * [[poster](#)] 
+
+* **A modular architecture for procedural generation of towns, intersections and scenarios for testing autonomous vehicles.**
+    * I. Paranjape, A. Jawad, **Yanwen Xu**, A. Song, J. Whitehead
+    * *IEEE Intelligent Vehicles Symposium ([IV](https://ieee-iv.org/2020/))*, 2020
+    * [[pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9304625)] [[code](https://github.com/AugmentedDesignLab/Sumo2Unreal)] [[DOI](https://ieeexplore.ieee.org/document/9304625)]
+

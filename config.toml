@@ -1,0 +1,37 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+title = "Yanwen Xu"
+
+compile_sass = true
+build_search_index = true
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
+
+[markdown]
+highlight_code = true
+
+theme = "apollo"
+
+[extra]
+
+theme = "toggle"
+
+menu = [
+    { name = "/about", url = "/", weight = 1 },
+    { name = "/publications", url = "/publications", weight = 2 },
+    { name = "/projects", url = "/projects", weight = 3 },
+    { name = "/games", url = "/games", weight = 4 },
+    { name = "/teaching", url = "/teaching", weight = 5 },
+    { name = "/cv", url = "/cv", weight = 6 },
+]
+
+socials = [
+    { name = "linkedin", url = "https://www.linkedin.com/in/yanwenxu/", icon = "linkedin" },
+    { name = "github", url = "https://github.com/xuyanwen2012", icon = "github" },
+    { name = "email", url = "mailto:yxu83@ucsc.edu", icon = "email" },
+]
