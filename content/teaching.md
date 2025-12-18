@@ -15,7 +15,6 @@ header_image = "/teaching.png"
 | **Fall 2023**                                                     | **CSE 13S**  | Computer Systems and C Programming |
 | **[Spring 2022](https://sorensenucsc.github.io/CSE110A-sp2022/)** | **CSE 110A** | Fundamentals of Compiler Design    |
 
----
 # Academic Services
 
 * **Workshop on Irregular Applications: Architectures and Algorithms ([IA³](https://hpc.pnl.gov/IA3/))** *Held in conjunction with the Supercomputing (SC) Conference* | 2022, 2023, 2024, 2025  

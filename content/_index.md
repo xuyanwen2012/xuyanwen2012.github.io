@@ -64,7 +64,7 @@ struct Research {
 };
 ```
 
-**Before starting my Ph.D**., I was an `indie game developer`, and many of the game projects are shown in my [portfolio](games). Aside from academics, I am a competitive `fencing` (🤺) athlete and a certified fencing `coach` by *U.S. Institutions of Higher Education*. I earned my diploma of *Instructor at Arms in Foil* in the year 2022, and *Provost at Arms* in year 2025.
+Before starting my Ph.D., I was an `indie game developer`, and many of the game projects are shown in my [portfolio](games). Aside from academics, I am a competitive `fencing` (🤺) athlete and a certified fencing `coach` by *U.S. Institutions of Higher Education*. I earned my diploma of *Instructor at Arms in Foil* in the year 2022, and *Provost at Arms* in year 2025.
 
 <!-- # 📣 Latest News
 
