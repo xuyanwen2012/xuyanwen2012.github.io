@@ -1,6 +1,6 @@
 +++
 [extra]
-header_image = "/publications.png"
+header_image = "/pic-publications.png"
 +++
 
 # Publications
@@ -29,3 +29,7 @@ header_image = "/publications.png"
   - I. Paranjape, A. Jawad, **Yanwen Xu**, A. Song, J. Whitehead
   - _IEEE Intelligent Vehicles Symposium ([IV](https://ieee-iv.org/2020/))_, 2020
   - [[pdf](iv.pdf)] [[code](https://github.com/AugmentedDesignLab/Sumo2Unreal)] [[DOI](https://ieeexplore.ieee.org/document/9304625)]
+
+## And more!
+
+Check out my [Google Scholar](https://scholar.google.com/citations?user=dz62UqAAAAAJ) for more publications.

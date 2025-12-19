@@ -4,7 +4,7 @@ sort_by = "date"
 template = "talks.html"
 
 [extra]
-header_image = "/games.png"
+header_image = "/pic-games.png"
 +++
 
 Here you will find a collection of my independent game projects (currently under construction).

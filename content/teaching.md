@@ -1,7 +1,7 @@
 +++
 template = "page.html"
 [extra]
-header_image = "/teaching.png"
+header_image = "/pic-teaching.png"
 +++
 
 # Teaching Experience
