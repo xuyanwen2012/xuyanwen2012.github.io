@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
         for (; e; ) {
-          e?.classList.add("parent"), (e = e.parentElement.closest("li"));
+          (e?.classList.add("parent"), (e = e.parentElement.closest("li")));
         }
       }
   }

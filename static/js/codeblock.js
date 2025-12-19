@@ -10,94 +10,102 @@ const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 
 // Function to change icons after copying
 const changeIcon = (button, isSuccess) => {
-    button.innerHTML = isSuccess ? successIcon : errorIcon;
-    setTimeout(() => {
-        button.innerHTML = copyIcon; // Reset to copy icon
-    }, 2000);
+  button.innerHTML = isSuccess ? successIcon : errorIcon;
+  setTimeout(() => {
+    button.innerHTML = copyIcon; // Reset to copy icon
+  }, 2000);
 };
 
 // Function to get code text from tables, skipping line numbers
 const getCodeFromTable = (codeBlock) => {
-    return [...codeBlock.querySelectorAll('tr')]
-        .map(row => row.querySelector('td:last-child')?.innerText ?? '')
-        .join('');
+  return [...codeBlock.querySelectorAll("tr")]
+    .map((row) => row.querySelector("td:last-child")?.innerText ?? "")
+    .join("");
 };
 
 // Function to get code text from non-table blocks
 const getNonTableCode = (codeBlock) => {
-    return codeBlock.textContent.trim();
+  return codeBlock.textContent.trim();
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Select all `pre` elements containing `code`
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all `pre` elements containing `code`
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const pre = entry.target.parentNode;
-            const clipboardBtn = pre.querySelector('.clipboard-button');
-            const label = pre.querySelector('.code-label');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const pre = entry.target.parentNode;
+        const clipboardBtn = pre.querySelector(".clipboard-button");
+        const label = pre.querySelector(".code-label");
 
-            if (clipboardBtn) {
-                // Adjust the position of the clipboard button when the `code` is not fully visible
-                clipboardBtn.style.right = entry.isIntersecting ? '5px' : `-${entry.boundingClientRect.right - pre.clientWidth + 5}px`;
-            }
+        if (clipboardBtn) {
+          // Adjust the position of the clipboard button when the `code` is not fully visible
+          clipboardBtn.style.right = entry.isIntersecting
+            ? "5px"
+            : `-${entry.boundingClientRect.right - pre.clientWidth + 5}px`;
+        }
 
-            if (label) {
-                // Adjust the position of the label similarly
-                label.style.right = entry.isIntersecting ? '0px' : `-${entry.boundingClientRect.right - pre.clientWidth}px`;
-            }
-        });
-    }, {
-        root: null, // observing relative to viewport
-        rootMargin: '0px',
-        threshold: 1.0 // Adjust this to control when the callback fires
+        if (label) {
+          // Adjust the position of the label similarly
+          label.style.right = entry.isIntersecting
+            ? "0px"
+            : `-${entry.boundingClientRect.right - pre.clientWidth}px`;
+        }
+      });
+    },
+    {
+      root: null, // observing relative to viewport
+      rootMargin: "0px",
+      threshold: 1.0, // Adjust this to control when the callback fires
+    },
+  );
+
+  document.querySelectorAll("pre code").forEach((codeBlock) => {
+    const pre = codeBlock.parentNode;
+    pre.style.position = "relative"; // Ensure parent `pre` can contain absolute elements
+
+    // Create and append the copy button
+    const copyBtn = document.createElement("button");
+    copyBtn.className = "clipboard-button";
+    copyBtn.innerHTML = copyIcon;
+    copyBtn.setAttribute("aria-label", "Copy code to clipboard");
+    pre.appendChild(copyBtn);
+
+    // Attach event listener to copy button
+    copyBtn.addEventListener("click", async () => {
+      // Determine if the code is in a table or not
+      const isTable = codeBlock.querySelector("table");
+      const codeToCopy = isTable
+        ? getCodeFromTable(codeBlock)
+        : getNonTableCode(codeBlock);
+      try {
+        await navigator.clipboard.writeText(codeToCopy);
+        changeIcon(copyBtn, true); // Show success icon
+      } catch (error) {
+        console.error("Failed to copy text: ", error);
+        changeIcon(copyBtn, false); // Show error icon
+      }
     });
 
-    document.querySelectorAll('pre code').forEach(codeBlock => {
-        const pre = codeBlock.parentNode;
-        pre.style.position = 'relative'; // Ensure parent `pre` can contain absolute elements
+    const langClass = codeBlock.className.match(/language-(\w+)/);
+    const lang = langClass ? langClass[1] : "default";
 
-        // Create and append the copy button
-        const copyBtn = document.createElement('button');
-        copyBtn.className = 'clipboard-button';
-        copyBtn.innerHTML = copyIcon;
-        copyBtn.setAttribute('aria-label', 'Copy code to clipboard');
-        pre.appendChild(copyBtn);
+    // Create and append the label
+    const label = document.createElement("span");
+    label.className = "code-label label-" + lang; // Use the specific language class
+    label.textContent = lang.toUpperCase(); // Display the language as label
+    pre.appendChild(label);
 
-        // Attach event listener to copy button
-        copyBtn.addEventListener('click', async () => {
-            // Determine if the code is in a table or not
-            const isTable = codeBlock.querySelector('table');
-            const codeToCopy = isTable ? getCodeFromTable(codeBlock) : getNonTableCode(codeBlock);
-            try {
-                await navigator.clipboard.writeText(codeToCopy);
-                changeIcon(copyBtn, true); // Show success icon
-            } catch (error) {
-                console.error('Failed to copy text: ', error);
-                changeIcon(copyBtn, false); // Show error icon
-            }
+    let ticking = false;
+    pre.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          copyBtn.style.right = `-${pre.scrollLeft}px`;
+          label.style.right = `-${pre.scrollLeft}px`;
+          ticking = false;
         });
-
-        const langClass = codeBlock.className.match(/language-(\w+)/);
-        const lang = langClass ? langClass[1] : 'default';
-
-        // Create and append the label
-        const label = document.createElement('span');
-        label.className = 'code-label label-' + lang; // Use the specific language class
-        label.textContent = lang.toUpperCase(); // Display the language as label
-        pre.appendChild(label);
-
-        let ticking = false;
-        pre.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    copyBtn.style.right = `-${pre.scrollLeft}px`;
-                    label.style.right = `-${pre.scrollLeft}px`;
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
+        ticking = true;
+      }
     });
+  });
 });

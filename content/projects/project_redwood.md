@@ -9,4 +9,3 @@ local_image = "redwood.png"
 github = "https://github.com/ucsc-redwood/redwood-aio"
 tags = ["ispass2023", "gpu", "cuda", "sycl"]
 +++
-

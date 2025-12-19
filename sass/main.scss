@@ -39,10 +39,10 @@ html {
     font-size: calc(var(--font-size-base) * 0.97);
   }
   @media (max-width: 768px) {
-      font-size: calc(var(--font-size-base) * 0.95);
+    font-size: calc(var(--font-size-base) * 0.95);
   }
   @media (max-width: 576px) {
-      font-size: calc(var(--font-size-base) * 0.92);
+    font-size: calc(var(--font-size-base) * 0.92);
   }
 }
 
@@ -85,16 +85,13 @@ body {
       flex: 1 1 0;
       min-width: 0;
 
-    // Don't move this to the TOC, it won't work
-    // FIXME: Find a workaround
-    position: sticky;
-    top: 60px;
-    padding: 1em;
-    overflow-y: auto;
-    max-height: calc(100vh - 100px);
-
+      // Don't move this to the TOC, it won't work
+      // FIXME: Find a workaround
+      position: sticky;
+      top: 60px;
+      padding: 1em;
+      overflow-y: auto;
+      max-height: calc(100vh - 100px);
     }
-
-
   }
 }

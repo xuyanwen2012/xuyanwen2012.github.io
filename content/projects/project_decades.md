@@ -17,8 +17,9 @@ tags = ["darpa", "fpga", "gem5"]
 
 # Our Contribution
 
-* Collaborated with Princeton, Columbia, and **UCSC** on a heterogeneous many-core system, contributing compiler and runtime support for efficient CPU-FPGA/GPU execution.
-* Designed a novel heterogeneous decoupling method, achieving a `2x` speedup on Barnes-Hut; results were used in `Phase 2` of DARPA SDH program and contributed to selection for `Phase 3`.
+- Collaborated with Princeton, Columbia, and **UCSC** on a heterogeneous many-core system, contributing compiler and runtime support for efficient CPU-FPGA/GPU execution.
+- Designed a novel heterogeneous decoupling method, achieving a `2x` speedup on Barnes-Hut; results were used in `Phase 2` of DARPA SDH program and contributed to selection for `Phase 3`.
 
 # Funding Acknowledgment
+
 This research was supported in part by the [DARPA Software-Defined Hardware Program](https://www.darpa.mil/research/programs/software-defined-hardware) under agreement `No.~FA8650-18-2-7862`

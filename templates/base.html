@@ -1,41 +1,38 @@
 {% import "macros/macros.html" as post_macros %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark light">
+  {% include "partials/header.html" %}
 
-{% include "partials/header.html" %}
-
-<body>
+  <body>
     <div class="left-content">
-        {% block left_content %}
-        {% endblock left_content %}
+      {% block left_content %}
+      {% endblock left_content %}
     </div>
 
     <div class="content">
-        {% include "partials/nav.html" %}
+      {% include "partials/nav.html" %}
 
-        {# Post page is the default #}
-        {% block main_content %}
+      {# Post page is the default #}
+      {% block main_content %}
         Nothing here?!
-        {% endblock main_content %}
+      {% endblock main_content %}
 
-        {% if page.extra.comment is defined %}
+      {% if page.extra.comment is defined %}
         {% set show_comment = page.extra.comment %}
-        {% else %}
+      {% else %}
         {% set show_comment = false %}
-        {% endif %}
+      {% endif %}
 
-        {% if show_comment %}
-        <div class="giscus">
-        </div>
+      {% if show_comment %}
+        <div class="giscus"></div>
         {% include "_giscus_script.html" %}
-        {% endif %}
+      {% endif %}
     </div>
 
     <div class="right-content">
-        {% block right_content %}
-        {% endblock right_content %}
+      {% block right_content %}
+      {% endblock right_content %}
     </div>
-</body>
-
+  </body>
 </html>

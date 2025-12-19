@@ -81,11 +81,11 @@
 }
 
 summary {
-    padding-left: 0.5em;
+  padding-left: 0.5em;
 
-    &:hover {
-        background-color: var(--primary-color);
-        color: var(--hover-color);
-        cursor: pointer;
-    }
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+    cursor: pointer;
+  }
 }

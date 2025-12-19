@@ -7,7 +7,7 @@ header_image = "/teaching.png"
 # Teaching Experience
 
 **University of California, Santa Cruz**
-*Graduate Teaching Assistant*
+_Graduate Teaching Assistant_
 
 | Term                                                              | Course       | Focus                              |
 | :---------------------------------------------------------------- | :----------- | :--------------------------------- |
@@ -17,10 +17,10 @@ header_image = "/teaching.png"
 
 # Academic Services
 
-* **Workshop on Irregular Applications: Architectures and Algorithms ([IA³](https://hpc.pnl.gov/IA3/))** *Held in conjunction with the Supercomputing (SC) Conference* | 2022, 2023, 2024, 2025  
+- **Workshop on Irregular Applications: Architectures and Algorithms ([IA³](https://hpc.pnl.gov/IA3/))** _Held in conjunction with the Supercomputing (SC) Conference_ | 2022, 2023, 2024, 2025  
   Reviewed technical paper submissions focused on irregular workloads and high-performance architectures.
 
-* **[Cal-Bridge Symposium at UC Santa Cruz](https://calbridge.org/portfolio-item/uc-santa-cruz/)** | August 2022  
+- **[Cal-Bridge Symposium at UC Santa Cruz](https://calbridge.org/portfolio-item/uc-santa-cruz/)** | August 2022  
   Hosted visiting scholars and provided academic and logistical support to foster diversity and inclusion in STEM across the UC and CSU systems.
 
 <!-- # Academic Services
@@ -45,5 +45,5 @@ header_image = "/teaching.png"
 
 * **Technical Reviewer** *Workshop on Irregular Applications: Architectures and Algorithms ([IA³](https://hpc.pnl.gov/IA3/))* Supercomputing (SC) Conference | 2022, 2023, 2024, 2025
 
-* **Symposium Host** *Cal-Bridge Symposium* at UC Santa Cruz  
+* **Symposium Host** *Cal-Bridge Symposium* at UC Santa Cruz
     Provided academic and logistical support for visiting scholars | August 2022 -->

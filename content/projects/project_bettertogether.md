@@ -9,4 +9,3 @@ local_image = "bettertogether.png"
 github = "https://github.com/ucsc-redwood/better-together"
 tags = ["iiswc2025", "openmp", "cuda", "vulkan"]
 +++
-

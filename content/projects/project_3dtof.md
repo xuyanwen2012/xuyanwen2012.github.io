@@ -9,4 +9,3 @@ local_image = "3dtof.png"
 github = "https://github.com/kgupta15/3d-tof-denoising"
 tags = ["pytorch", "cnn", "ai", "tof"]
 +++
-

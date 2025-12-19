@@ -1,0 +1,31 @@
+# .prettierignore for a Zola project
+
+# Ignore build output directories
+public/
+output/
+build/
+coverage/
+themes/
+
+# Ignore cache and temporary files
+.cache/
+.zola-cache/
+*.tmp
+*.log
+
+# Ignore uploads and other generated assets
+static/uploads/
+uploads/
+
+# Ignore node and editor configs
+node_modules/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

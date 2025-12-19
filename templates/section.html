@@ -1,44 +1,44 @@
 {% extends "base.html" %}
 
 {% macro content(section) %}
-<div class="visible-element-observer-root" data-selector="main article p">
+  <div class="visible-element-observer-root" data-selector="main article p">
     <main>
-        <article>
-            {% if section.extra.header_image %}
-            {% set header_image_path = section.extra.header_image %}
-            {% if header_image_path is not starting_with("/") %}
+      <article>
+        {% if section.extra.header_image %}
+          {% set header_image_path = section.extra.header_image %}
+          {% if header_image_path is not starting_with("/") %}
             {# For sections, use the section's directory path #}
             {% set section_dir = section.path | split(pat="/") | slice(end=-1) | join(sep="/") %}
             {% if section_dir %}
-            {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
+              {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
             {% else %}
-            {% set header_image_path = "/" ~ section.extra.header_image %}
+              {% set header_image_path = "/" ~ section.extra.header_image %}
             {% endif %}
-            {% endif %}
-            <div class="page-header-image">
-                <img src="{{ get_url(path=header_image_path) }}" alt="{{ section.title }}" />
-            </div>
-            {% endif %}
-            <div class="title">
-                {{ post_macros::page_header(title=section.title) }}
-            </div>
+          {% endif %}
+          <div class="page-header-image">
+            <img
+              src="{{ get_url(path=header_image_path) }}"
+              alt="{{ section.title }}"
+            />
+          </div>
+        {% endif %}
+        <div class="title">
+          {{ post_macros::page_header(title=section.title) }}
+        </div>
 
-            <section class="body">
-                {{ section.content | safe }}
-            </section>
-        </article>
+        <section class="body">{{ section.content | safe }}</section>
+      </article>
     </main>
-</div>
+  </div>
 {% endmacro content %}
 
-
 {% block main_content %}
-{{ self::content(section=section) }}
+  {{ self::content(section=section) }}
 {% endblock main_content %}
 
 {% block right_content %}
-{# Optional table of contents #}
-{% if config.extra.toc | default(value=false) and section.toc %}
-{% include "partials/toc.html" %}
-{% endif %}
+  {# Optional table of contents #}
+  {% if config.extra.toc | default(value=false) and section.toc %}
+    {% include "partials/toc.html" %}
+  {% endif %}
 {% endblock right_content %}

@@ -9,4 +9,3 @@ local_image = "CruzWay.png"
 github = "https://github.com/AugmentedDesignLab/Sumo2Unreal"
 tags = ["iv20", "unreal", "c++", "pcg"]
 +++
-
