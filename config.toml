@@ -33,5 +33,7 @@ menu = [
 socials = [
     { name = "linkedin", url = "https://www.linkedin.com/in/yanwenxu/", icon = "linkedin" },
     { name = "github", url = "https://github.com/xuyanwen2012", icon = "github" },
+    { name = "google-scholar", url = "https://scholar.google.com/citations?user=dz62UqAAAAAJ", icon = "google-scholar" },
+    { name = "orcid", url = "https://orcid.org/0009-0001-6750-9798", icon = "orcid" },
     { name = "email", url = "mailto:yxu83@ucsc.edu", icon = "email" },
 ]

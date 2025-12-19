@@ -39,7 +39,8 @@ template = "homepage.html"
 
 # 👋 Hi
 
-I am a final-year **Ph.D. candidate** in the Department of _Computer Science & Engineering_ at the University of California, Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by Professor [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/).
+I am a final-year **Ph.D. candidate** in the Department of _Computer Science & Engineering_ at the University of California, Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by Professor [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/). I recently joined Samsung as a GPU Engineer.
+
 
 **My research interests** include:
 
@@ -58,7 +59,7 @@ struct Research {
         Compiler::bridge(HighLevelPL, PeakPerformance);
     }
 
-    bool goal = "Unleash full hardware potential";
+    auto goal = "Unleash full hardware potential";
 };
 ```
 
