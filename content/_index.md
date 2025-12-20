@@ -30,7 +30,7 @@ template = "homepage.html"
 </style>
 
 <div class="homepage-hero">
-    {{ avatar(path="avartar.png", alt="Yanwen Xu", width=600) }}
+    <img src="avartar.png" alt="Yanwen Xu" class="homepage-hero-avatar" />
     <h1 class="homepage-hero-title">Yanwen Xu</h1>
     <p class="homepage-hero-subtitle">Ph.D. Candidate in CSE @ UC Santa Cruz && GPU Engineer @ Samsung</p>
 </div>
