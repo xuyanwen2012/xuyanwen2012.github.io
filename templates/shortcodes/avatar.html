@@ -7,4 +7,8 @@
 
 {# Process avatar to WebP - using 2x width for retina displays #}
 {% set avatar_image = resize_image(path=avatar_path, width=avatar_width, op="fit_width", format="webp", quality=avatar_quality) %}
-<img src="{{ avatar_image.url }}" alt="{{ alt | default(value='Avatar') }}" class="{{ avatar_class }}" />
+<img
+  src="{{ avatar_image.url }}"
+  alt="{{ alt | default(value='Avatar') }}"
+  class="{{ avatar_class }}"
+/>

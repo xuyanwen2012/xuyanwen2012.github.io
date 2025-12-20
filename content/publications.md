@@ -26,7 +26,7 @@ header_image = "/pic-publications.png"
   - _Parallel Architectures and Compilation Techniques ([PACT](https://pact22.cs.illinois.edu/)), ACM Student Research Competition_, 2022
   - [[pdf]](pdf-pact.pdf) [[poster](pdf-pact-poster.pdf)]
 
-- **A modular architecture for procedural generation of towns, intersections and scenarios for testing autonomous vehicles.**
+- **A Modular Architecture for Procedural Generation of Towns, Intersections and Scenarios for Testing Autonomous Vehicles.**
   - I. Paranjape, A. Jawad, **Yanwen Xu**, A. Song, J. Whitehead
   - _IEEE Intelligent Vehicles Symposium ([IV](https://ieee-iv.org/2020/))_, 2020
   - [[pdf](pdf-iv.pdf)] [[code](https://github.com/AugmentedDesignLab/Sumo2Unreal)] [[DOI](https://ieeexplore.ieee.org/document/9304625)]

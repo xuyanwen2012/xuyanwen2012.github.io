@@ -4,7 +4,9 @@ description = "A custom-built Action RPG (ARPG) combat engine developed within R
 date = 2017-05-06
 
 [extra]
-video = { link = "https://youtu.be/ddu1r0sn4vo", thumbnail = "images/talks/default.webp" }
+# YouTube thumbnail will be auto-generated from the video link
+# Optional: specify thumbnail quality: "maxresdefault" (1280x720), "hqdefault" (480x360), or "mqdefault" (320x180)
+video = { link = "https://youtu.be/ddu1r0sn4vo", thumbnail_quality = "hqdefault" }
 
 code = "https://github.com/RaiderSoap/RMMV-Battle-System-JS"
 
