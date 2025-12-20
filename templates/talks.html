@@ -139,9 +139,11 @@
         {% set header_image_path = "/" ~ section.extra.header_image %}
       {% endif %}
     {% endif %}
+    {# Process header image: resize to max 1200px width and convert to WebP #}
+    {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
     <div class="page-header-image">
       <img
-        src="{{ get_url(path=header_image_path) }}"
+        src="{{ header_image.url }}"
         alt="{{ section.title }}"
       />
     </div>

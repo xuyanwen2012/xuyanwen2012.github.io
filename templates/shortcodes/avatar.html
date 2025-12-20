@@ -1,0 +1,10 @@
+{# Avatar shortcode that processes the image to WebP #}
+{# Usage: {{ avatar(path="avartar.png", width=600) }} #}
+{% set avatar_path = path | default(value="avartar.png") %}
+{% set avatar_width = width | default(value=600) %}
+{% set avatar_quality = quality | default(value=85) %}
+{% set avatar_class = class | default(value="homepage-hero-avatar") %}
+
+{# Process avatar to WebP - using 2x width for retina displays #}
+{% set avatar_image = resize_image(path=avatar_path, width=avatar_width, op="fit_width", format="webp", quality=avatar_quality) %}
+<img src="{{ avatar_image.url }}" alt="{{ alt | default(value='Avatar') }}" class="{{ avatar_class }}" />
