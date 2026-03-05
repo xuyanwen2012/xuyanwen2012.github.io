@@ -39,7 +39,7 @@ template = "homepage.html"
 
 # 👋 Hi
 
-I am a final-year **Ph.D. candidate** in the Department of _Computer Science & Engineering_ at the University of California, Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by Professor [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/). I recently joined Samsung as a GPU Engineer.
+I am a **Ph.D.** Graduate in the Department of _Computer Science & Engineering_ at the University of California, Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by Professor [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/). Currently, I am a GPU Engineer at Samsung Advanced Computing Lab. 
 
 **My research interests** include:
 
@@ -72,6 +72,7 @@ Before starting my Ph.D., I was an `indie game developer`, and many of my game p
 
 # 📣 Latest News
 
+- **Mar 2026** - I Successfully defended my dissertation. Officially Dr. Xu! 🎓
 - **Oct 2025** — I presented **BetterTogether** at **IISWC'25**. Our work received the **Best Paper Award**! 🏆
 - **Sep 2025** — I joined the **Samsung Advanced Computing Lab** full-time!
 - **Aug 2025** — Our work **BetterTogether** was accepted for publication at **IISWC'25**.
