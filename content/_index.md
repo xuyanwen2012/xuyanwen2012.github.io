@@ -72,7 +72,7 @@ Before starting my Ph.D., I was an `indie game developer`, and many of my game p
 
 # 📣 Latest News
 
-- **Mar 2026** - I Successfully defended my dissertation. Officially Dr. Xu! 🎓
+- **Mar 2026** — I successfully defended my dissertation. Officially Dr. Xu! 🎓
 - **Oct 2025** — I presented **BetterTogether** at **IISWC'25**. Our work received the **Best Paper Award**! 🏆
 - **Sep 2025** — I joined the **Samsung Advanced Computing Lab** full-time!
 - **Aug 2025** — Our work **BetterTogether** was accepted for publication at **IISWC'25**.

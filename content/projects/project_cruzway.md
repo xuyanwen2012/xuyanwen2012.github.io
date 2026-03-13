@@ -1,7 +1,7 @@
 +++
 title = "CruzWay"
 description = "A modular simulation platform for procedurally generating large-scale road networks and autonomous behaviors to test rare safety scenarios."
-weight = 4
+weight = 7
 date = 2000-01-01
 
 [extra]
