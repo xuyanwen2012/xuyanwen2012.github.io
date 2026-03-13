@@ -19,12 +19,12 @@ header_image = "/pic-publications.png"
 - **Evaluating Shared Memory Heterogeneous Systems Using Traverse-Compute Workloads.**
   - **Yanwen Xu**, A. Li, T. Sorensen
   - _Open-Source Computer Architecture Research ([OSCAR](https://oscar-workshop.github.io/Home_2023.html)) Workshop_, 2023
-  - [[pdf]](pdf-oscar.pdf) [[slides](https://oscar-workshop.github.io/files/03_OSCAR2023-yanwenxu.pdf)] [[video](https://youtu.be/Ebvd9IFk1g8)]
+  - [[pdf](pdf-oscar.pdf)] [[slides](https://oscar-workshop.github.io/files/03_OSCAR2023-yanwenxu.pdf)] [[video](https://youtu.be/Ebvd9IFk1g8)]
 
 - **REDwood: Heterogeneous Implementation of Tree Applications with Accelerated REDuctions.**
   - **Yanwen Xu**, T. Sorensen
   - _Parallel Architectures and Compilation Techniques ([PACT](https://pact22.cs.illinois.edu/)), ACM Student Research Competition_, 2022
-  - [[pdf]](pdf-pact.pdf) [[poster](pdf-pact-poster.pdf)]
+  - [[pdf](pdf-pact.pdf)] [[poster](pdf-pact-poster.pdf)]
 
 - **A Modular Architecture for Procedural Generation of Towns, Intersections and Scenarios for Testing Autonomous Vehicles.**
   - I. Paranjape, A. Jawad, **Yanwen Xu**, A. Song, J. Whitehead

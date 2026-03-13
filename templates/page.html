@@ -18,11 +18,10 @@
           {# Process header image: resize to max 1200px width and convert to WebP #}
           {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
           <div class="page-header-image">
-            <img src="{{ header_image.url }}" alt="{{ page.title }}" />
+            <img src="{{ header_image.url }}" alt="{{ page.title }}" loading="lazy" decoding="async" />
           </div>
         {% endif %}
         <div class="title">
-          {#<h1 class="title">{{ page.title }}</h1>#}
           {{ post_macros::page_header(title=page.title) }}
 
           <div class="meta">

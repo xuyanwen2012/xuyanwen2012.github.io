@@ -1,6 +1,6 @@
 {# Avatar shortcode that processes the image to WebP #}
-{# Usage: {{ avatar(path="avartar.png", width=600) }} #}
-{% set avatar_path = path | default(value="avartar.png") %}
+{# Usage: {{ avatar(path="avatar.png", width=600) }} #}
+{% set avatar_path = path | default(value="avatar.png") %}
 {% set avatar_width = width | default(value=600) %}
 {% set avatar_quality = quality | default(value=85) %}
 {% set avatar_class = class | default(value="homepage-hero-avatar") %}
