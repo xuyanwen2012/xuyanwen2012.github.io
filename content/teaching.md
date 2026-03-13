@@ -25,5 +25,5 @@ _Graduate Teaching Assistant_
 
 # Talks
 
-- **[LSD Seminar (Spring 2023)](https://lsd.ucsc.edu/lsd-seminar/2023sp/)** | Apr 2023  
-  **Using all the processors in your heterogeneous system: a case study for tree-based applications** Presented a framework for accelerating tree-based applications in shared-memory heterogeneous systems.
+- **[LSD Seminar (Spring 2023)](https://lsd.ucsc.edu/lsd-seminar/2023sp/)** | Apr 2023
+  **Using all the processors in your heterogeneous system: a case study for tree-based applications.** Presented a framework for accelerating tree-based applications in shared-memory heterogeneous systems.

@@ -1,5 +1,5 @@
 +++
-title = "GEMMStore "
+title = "GEMMStore"
 description = "A browser-based WebGPU framework that exhaustively benchmarks tunable shaders to identify performance-portable parameters across diverse GPU architectures."
 weight = 2
 date = 2000-01-01
