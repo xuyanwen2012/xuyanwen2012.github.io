@@ -82,18 +82,22 @@
             {%- endif -%}
 
             {% if page.extra.video.thumbnail %}
-              {# Use custom thumbnail if provided #}
-              <!-- TODO: Add srcset -->
-              {% set image = resize_image(path=page.extra.video.thumbnail, width=640, height=360, format="webp") %}
+              {# Use custom thumbnail with responsive srcset #}
+              {% set image_sm = resize_image(path=page.extra.video.thumbnail, width=320, height=180, format="webp") %}
+              {% set image_md = resize_image(path=page.extra.video.thumbnail, width=640, height=360, format="webp") %}
+              {% set image_lg = resize_image(path=page.extra.video.thumbnail, width=960, height=540, format="webp") %}
               <img
                 class="talk-image"
                 loading="lazy"
                 decoding="async"
+                srcset="{{ image_sm.url }} 320w,
+                        {{ image_md.url }} 640w,
+                        {{ image_lg.url }} 960w"
                 sizes="(max-width: 640px) 100vw,
-                                        (max-width: 1024px) 50vw,
-                                        33vw"
+                       (max-width: 1024px) 50vw,
+                       33vw"
                 alt="{{ page.extra.video.thumbnail.alt | default(value='Thumbnail for the talk') }}"
-                src="{{ image.url }}"
+                src="{{ image_md.url }}"
               />
               <div class="video-play-btn">
                 <div class="rounded-btn">
@@ -236,7 +240,7 @@
     {# Process header image: resize to max 1200px width and convert to WebP #}
     {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
     <div class="page-header-image">
-      <img src="{{ header_image.url }}" alt="{{ section.title }}" />
+      <img src="{{ header_image.url }}" alt="{{ section.title }}" loading="lazy" decoding="async" />
     </div>
   {% endif %}
 
