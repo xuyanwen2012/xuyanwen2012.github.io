@@ -135,23 +135,7 @@
     {% set section = get_section(path=section.extra.section_path) %}
   {% endif -%}
 
-  {% if section.extra.header_image %}
-    {% set header_image_path = section.extra.header_image %}
-    {% if header_image_path is not starting_with("/") %}
-      {# For sections, use the section's path #}
-      {% set section_dir = section.path %}
-      {% if section_dir %}
-        {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
-      {% else %}
-        {% set header_image_path = "/" ~ section.extra.header_image %}
-      {% endif %}
-    {% endif %}
-    {# Process header image: resize to max 1200px width and convert to WebP #}
-    {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
-    <div class="page-header-image">
-      <img src="{{ header_image.url }}" alt="{{ section.title }}" loading="lazy" decoding="async" />
-    </div>
-  {% endif %}
+  {% include "partials/header_image.html" %}
 
   {{ post_macros::page_header(title=section.title) }}
 
@@ -169,26 +153,5 @@
     {{ self::cards_posts(pages=show_pages) }}
   </main>
 
-  {% if paginator %}
-    <ul class="pagination">
-      {% if paginator.previous %}
-        <span class="page-item page-prev">
-          <a
-            href="{{ paginator.previous }}"
-            class="page-link"
-            aria-label="Previous"
-            ><span aria-hidden="true">← Prev</span></a
-          >
-        </span>
-      {% endif %}
-
-      {% if paginator.next %}
-        <span class="page-item page-next">
-          <a href="{{ paginator.next }}" class="page-link" aria-label="Next"
-            ><span aria-hidden="true">Next →</span></a
-          >
-        </span>
-      {% endif %}
-    </ul>
-  {% endif %}
+  {% include "partials/pagination.html" %}
 {% endblock main_content %}

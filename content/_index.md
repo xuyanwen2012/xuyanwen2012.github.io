@@ -2,41 +2,6 @@
 template = "homepage.html"
 +++
 
-<style>
-.homepage-hero {
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.homepage-hero-avatar {
-    border-radius: 50%;
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-}
-
-.homepage-hero-title {
-    font-size: 3rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.homepage-hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-</style>
-
-<div class="homepage-hero">
-    <img src="avatar.png" alt="Yanwen Xu" class="homepage-hero-avatar" />
-    <h1 class="homepage-hero-title">Yanwen Xu</h1>
-    <p class="homepage-hero-subtitle">Ph.D. in CSE @ UC Santa Cruz && GPU Engineer @ Samsung</p>
-</div>
-
----
-
 # 👋 Hi
 
 I am a **Ph.D.** Graduate in the Department of _Computer Science & Engineering_ at the University of California, Santa Cruz ([**UCSC**](https://www.ucsc.edu/)), supervised by Professor [**Tyler Sorensen**](https://users.soe.ucsc.edu/~tsorensen/). Currently, I am a GPU Engineer at Samsung Advanced Computing Lab. 

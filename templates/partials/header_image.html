@@ -1,0 +1,15 @@
+{% if section.extra.header_image %}
+  {% set header_image_path = section.extra.header_image %}
+  {% if header_image_path is not starting_with("/") %}
+    {% set section_dir = section.path %}
+    {% if section_dir %}
+      {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
+    {% else %}
+      {% set header_image_path = "/" ~ section.extra.header_image %}
+    {% endif %}
+  {% endif %}
+  {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
+  <div class="page-header-image">
+    <img src="{{ header_image.url }}" alt="{{ section.title }}" loading="lazy" decoding="async" />
+  </div>
+{% endif %}

@@ -27,22 +27,22 @@
         <br />
         <span class="pub-links">
           {%- if page.extra.pdf %}
-            [<a href="{{ page.extra.pdf }}">pdf</a>]
+            <a href="{{ page.extra.pdf }}">pdf</a>
           {% endif -%}
           {%- if page.extra.slides %}
-            [<a href="{{ page.extra.slides }}">slides</a>]
+            <a href="{{ page.extra.slides }}">slides</a>
           {% endif -%}
           {%- if page.extra.poster %}
-            [<a href="{{ page.extra.poster }}">poster</a>]
+            <a href="{{ page.extra.poster }}">poster</a>
           {% endif -%}
           {%- if page.extra.video %}
-            [<a href="{{ page.extra.video }}">video</a>]
+            <a href="{{ page.extra.video }}">video</a>
           {% endif -%}
           {%- if page.extra.code %}
-            [<a href="{{ page.extra.code }}">code</a>]
+            <a href="{{ page.extra.code }}">code</a>
           {% endif -%}
           {%- if page.extra.doi %}
-            [<a href="{{ page.extra.doi }}">DOI</a>]
+            <a href="{{ page.extra.doi }}">DOI</a>
           {% endif -%}
         </span>
       </li>
@@ -51,21 +51,7 @@
 {% endmacro pub_list %}
 
 {% block main_content %}
-  {% if section.extra.header_image %}
-    {% set header_image_path = section.extra.header_image %}
-    {% if header_image_path is not starting_with("/") %}
-      {% set section_dir = section.path %}
-      {% if section_dir %}
-        {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
-      {% else %}
-        {% set header_image_path = "/" ~ section.extra.header_image %}
-      {% endif %}
-    {% endif %}
-    {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
-    <div class="page-header-image">
-      <img src="{{ header_image.url }}" alt="{{ section.title }}" loading="lazy" decoding="async" />
-    </div>
-  {% endif %}
+  {% include "partials/header_image.html" %}
 
   {{ post_macros::page_header(title=section.title) }}
 
