@@ -1,0 +1,46 @@
+{% import "macros/macros.html" as post_macros %}
+
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    {% include "partials/header.html" %}
+
+    <body>
+        <div class="left-content">
+            {% block left_content %}
+            {% endblock left_content %}
+        </div>
+
+        <div class="content">
+            {% include "partials/nav.html" %}
+
+            {% block main_content %}
+                Nothing here?!
+            {% endblock main_content %}
+
+            {% if page.extra.comment is defined %}
+                {% set show_comment = page.extra.comment %}
+            {% else %}
+                {% set show_comment = false %}
+            {% endif %}
+
+            {% if show_comment %}
+                <div class="giscus">
+                </div>
+                {% include "_giscus_script.html" %}
+            {% endif %}
+
+            <footer class="site-footer">
+                <span>Powered by <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a></span>
+                <span class="footer-sep">&bull;</span>
+                <span>Theme <a href="https://github.com/not-matthias/apollo" target="_blank" rel="noopener">Apollo</a></span>
+            </footer>
+        </div>
+
+        <div class="right-content">
+            {% block right_content %}
+            {% endblock right_content %}
+        </div>
+    </body>
+
+</html>

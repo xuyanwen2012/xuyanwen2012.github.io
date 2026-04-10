@@ -129,9 +129,43 @@ h6 { font-size: 1.05rem; }
   }
 }
 
-// Award highlight
-.publication-entry:has([data-award]) {
+// Award-winning publication
+.publication-entry.has-award {
+  position: relative;
   border-left-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.pub-content {
+  position: relative;
+  z-index: 1;
+}
+
+.pub-award-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 90px;
+  height: auto;
+  z-index: 2;
+  opacity: 0.9;
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    width: 70px;
+    top: -4px;
+    right: -4px;
+  }
+}
+
+.pub-award-text {
+  color: var(--primary-color);
 }
 
 // -----------------------------------------------------------------------------
@@ -146,6 +180,31 @@ h6 { font-size: 1.05rem; }
     width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Site footer
+// -----------------------------------------------------------------------------
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-1);
+
+  a {
+    color: var(--text-0);
+    border-bottom: none !important;
+
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  .footer-sep {
+    margin: 0 0.5rem;
   }
 }
 
