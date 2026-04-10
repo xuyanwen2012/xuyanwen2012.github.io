@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% import "macros/macros.html" as post_macros %}
+
+{% macro pub_list(pages) %}
+  <ul class="publications-list">
+    {%- for page in pages %}
+      <li class="publication-entry">
+        <strong>{{ page.title }}</strong>
+        <br />
+        <span class="pub-authors">
+          {%- for author in page.extra.authors -%}
+            {%- if author == "Yanwen Xu" -%}
+              <strong>{{ author }}</strong>
+            {%- else -%}
+              {{ author }}
+            {%- endif -%}
+            {%- if not loop.last %}, {% endif -%}
+          {%- endfor -%}
+        </span>
+        <br />
+        <em>{{ page.extra.venue_full }}
+          ({% if page.extra.venue_url %}<a href="{{ page.extra.venue_url }}">{{ page.extra.venue }}</a>{% else %}{{ page.extra.venue }}{% endif %})
+        </em>, {{ page.extra.year }}
+        {% if page.extra.award %}
+          <strong>[{{ page.extra.award }}]</strong>
+        {% endif %}
+        <br />
+        <span class="pub-links">
+          {%- if page.extra.pdf %}
+            [<a href="{{ page.extra.pdf }}">pdf</a>]
+          {% endif -%}
+          {%- if page.extra.slides %}
+            [<a href="{{ page.extra.slides }}">slides</a>]
+          {% endif -%}
+          {%- if page.extra.poster %}
+            [<a href="{{ page.extra.poster }}">poster</a>]
+          {% endif -%}
+          {%- if page.extra.video %}
+            [<a href="{{ page.extra.video }}">video</a>]
+          {% endif -%}
+          {%- if page.extra.code %}
+            [<a href="{{ page.extra.code }}">code</a>]
+          {% endif -%}
+          {%- if page.extra.doi %}
+            [<a href="{{ page.extra.doi }}">DOI</a>]
+          {% endif -%}
+        </span>
+      </li>
+    {% endfor -%}
+  </ul>
+{% endmacro pub_list %}
+
+{% block main_content %}
+  {% if section.extra.header_image %}
+    {% set header_image_path = section.extra.header_image %}
+    {% if header_image_path is not starting_with("/") %}
+      {% set section_dir = section.path %}
+      {% if section_dir %}
+        {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
+      {% else %}
+        {% set header_image_path = "/" ~ section.extra.header_image %}
+      {% endif %}
+    {% endif %}
+    {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
+    <div class="page-header-image">
+      <img src="{{ header_image.url }}" alt="{{ section.title }}" loading="lazy" decoding="async" />
+    </div>
+  {% endif %}
+
+  {{ post_macros::page_header(title=section.title) }}
+
+  <main>
+    {%- if paginator %}
+      {%- set show_pages = paginator.pages -%}
+    {% else %}
+      {%- set show_pages = section.pages -%}
+    {% endif -%}
+
+    {{ self::pub_list(pages=show_pages) }}
+  </main>
+
+  {% if section.content %}
+    <div class="section-content">
+      <h2>And more!</h2>
+      {{ section.content | safe }}
+    </div>
+  {% endif %}
+{% endblock main_content %}

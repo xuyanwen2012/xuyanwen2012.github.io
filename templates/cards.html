@@ -37,7 +37,7 @@
             {% if page.extra.local_image %}
               {% set path = page.extra.local_image %}
               {% if path is not starting_with("/") %}
-                {% set path = section.path ~ "/" ~ page.extra.local_image %}
+                {% set path = page.path ~ page.extra.local_image %}
               {% endif %}
               {% set path_parts = path | split(pat=".") %}
               {% set ext = path_parts | last | lower %}
