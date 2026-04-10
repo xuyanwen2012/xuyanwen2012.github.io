@@ -1,6 +1,7 @@
 # The URL the site will be built for
 base_url = "https://xuyanwen2012.github.io"
 title = "Yanwen Xu"
+description = "Personal site of Yanwen Xu — Ph.D. in Computer Science & Engineering, GPU Engineer at Samsung. Research in heterogeneous computing, compilers, and programming languages."
 
 compile_sass = true
 build_search_index = false
@@ -22,6 +23,8 @@ highlight_code = true
 
 theme = "toggle"
 stylesheets = ["custom.css"]
+subtitle = "Ph.D. in CSE @ UC Santa Cruz && GPU Engineer @ Samsung"
+og_image = "avatar.png"
 
 menu = [
     { name = "/about", url = "/", weight = 1 },
@@ -37,5 +40,5 @@ socials = [
     { name = "github", url = "https://github.com/xuyanwen2012", icon = "github" },
     { name = "google-scholar", url = "https://scholar.google.com/citations?user=dz62UqAAAAAJ", icon = "google-scholar" },
     { name = "orcid", url = "https://orcid.org/0009-0001-6750-9798", icon = "orcid" },
-    { name = "email", url = "mailto:yxu83@ucsc.edu", icon = "email" },
+    { name = "email", url = "mailto:yanwen.xu@samsung.com", icon = "email" },
 ]

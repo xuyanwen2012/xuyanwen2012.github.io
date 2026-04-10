@@ -27,8 +27,6 @@ struct Research {
 };
 ```
 
-<!-- Before starting my Ph.D., I was an `indie game developer`, and many of the game projects are shown in my [portfolio](games). Aside from academics, I am a competitive `fencing` (🤺) athlete and a certified fencing `coach` by *U.S. Institutions of Higher Education*. I earned my diploma of *Instructor at Arms in Foil* in the year 2022, and *Provost at Arms* in year 2025. -->
-
 Before starting my Ph.D., I was an `indie game developer`, and many of my game projects are featured in my [portfolio](games). Aside from academia, I am a competitive `fencing` (🤺) athlete and a certified coach. I earned my _Instructor at Arms in Foil_ diploma in 2022 and _Provost at Arms_ in 2024.
 
 **BTW:** My favorite Linux distro is _Fedora_, my favorite DE is _XFCE4_, and my favorite processor is _AMD EPYC_.
@@ -42,6 +40,6 @@ Before starting my Ph.D., I was an `indie game developer`, and many of my game p
 - **Sep 2025** — I joined the **Samsung Advanced Computing Lab** full-time!
 - **Aug 2025** — Our work **BetterTogether** was accepted for publication at **IISWC'25**.
 - **Apr 2024** — I started a research internship at **Mercedes-Benz R&D North America**.
-- **May 2023** — Successfully advanced to **Ph.D. Candidacy**! ✅
 - **Jun 2023** — I gave a virtual talk on **Redwood** at OSCAR’23.
+- **May 2023** — Successfully advanced to **Ph.D. Candidacy**! ✅
 - **Apr 2023** — I presented **Redwood** at **ISPASS’23**.

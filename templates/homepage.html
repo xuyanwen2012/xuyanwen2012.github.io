@@ -6,7 +6,7 @@
       <div class="homepage-hero">
         <img src="{{ get_url(path='avatar.png') }}" alt="{{ config.title }}" class="homepage-hero-avatar" />
         <h1 class="homepage-hero-title">{{ config.title }}</h1>
-        <p class="homepage-hero-subtitle">Ph.D. in CSE @ UC Santa Cruz && GPU Engineer @ Samsung</p>
+        <p class="homepage-hero-subtitle">{{ config.extra.subtitle }}</p>
       </div>
       <hr />
       <section class="body">{{ section.content | safe }}</section>

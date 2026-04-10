@@ -17,6 +17,8 @@ _Graduate Teaching Assistant_
 
 # Academic Services
 
+- **Parallel Architectures and Compilation Techniques ([PACT](https://pact2026.github.io/))** | Program Committee, 2026
+
 - **Workshop on Irregular Applications: Architectures and Algorithms ([IA³](https://hpc.pnl.gov/IA3/))** _Held in conjunction with the Supercomputing ([SC](https://supercomputing.org/)) Conference_ | 2022, 2023, 2024, 2025  
   Reviewed technical paper submissions focused on irregular workloads and high-performance architectures.
 
