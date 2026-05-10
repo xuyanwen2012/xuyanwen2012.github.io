@@ -1,6 +1,6 @@
 +++
 title = "Denoising 3D ToF"
-description = "A two-part convolutional neural network that removes multi-path interference from Time-of-Flight cameras to generate accurate depth maps."
+description = "A two-stage convolutional network for reducing multi-path interference in Time-of-Flight depth cameras and recovering cleaner depth maps."
 weight = 6
 date = 2000-01-01
 

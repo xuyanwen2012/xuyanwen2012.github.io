@@ -7,5 +7,6 @@ template = "talks.html"
 header_image = "/pic-games.png"
 +++
 
-Here you will find a collection of my independent game projects (currently under construction).
-My journey in game development began as a lifelong passion for JRPGs, which I grew up creating as a hobby.
+This is an archive of independent game and engine experiments I built before graduate school. Most of them grew out of a lifelong interest in JRPGs, but the technical thread is broader: real-time combat loops, scripting systems, custom AI behavior, animation control, collision handling, and tooling inside constrained engines.
+
+These projects are not my current professional focus, but they shaped how I think about interactive systems and programmable tools.

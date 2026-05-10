@@ -1,6 +1,6 @@
 +++
 title = "DECADES"
-description = "A reconfigurable heterogeneous many-core system designed to accelerate data-intensive applications beyond the limits of Moore’s Law."
+description = "Compiler and runtime support for a DARPA-backed reconfigurable many-core system targeting data-intensive heterogeneous acceleration."
 weight = 3
 date = 2023-05-01
 

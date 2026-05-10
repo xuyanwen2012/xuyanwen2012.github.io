@@ -90,9 +90,11 @@
                 class="talk-image"
                 loading="lazy"
                 decoding="async"
-                srcset="{{ image_sm.url }} 320w,
-                        {{ image_md.url }} 640w,
-                        {{ image_lg.url }} 960w"
+                srcset="
+                  {{ image_sm.url }} 320w,
+                  {{ image_md.url }} 640w,
+                  {{ image_lg.url }} 960w
+                "
                 sizes="(max-width: 640px) 100vw,
                        (max-width: 1024px) 50vw,
                        33vw"
@@ -225,7 +227,6 @@
   {% if section.extra.section_path -%}
     {% set section = get_section(path=section.extra.section_path) %}
   {% endif -%}
-
   {% include "partials/header_image.html" %}
 
   {{ post_macros::page_header(title=section.title) }}

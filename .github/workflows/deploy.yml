@@ -1,4 +1,4 @@
-name: Deploy Zola Site to GitHub Pages (v0.21.0)
+name: Deploy Zola Site to GitHub Pages (v0.22.1)
 
 on:
   push:
@@ -17,6 +17,6 @@ jobs:
           submodules: recursive
 
       - name: Build and Deploy
-        uses: shalzz/zola-deploy-action@v0.21.0
+        uses: shalzz/zola-deploy-action@v0.22.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

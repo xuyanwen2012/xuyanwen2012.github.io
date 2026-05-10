@@ -134,7 +134,6 @@
   {% if section.extra.section_path -%}
     {% set section = get_section(path=section.extra.section_path) %}
   {% endif -%}
-
   {% include "partials/header_image.html" %}
 
   {{ post_macros::page_header(title=section.title) }}

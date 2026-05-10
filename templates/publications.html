@@ -4,14 +4,22 @@
 {% macro pub_list(pages) %}
   <ul class="publications-list">
     {%- for page in pages %}
-      <li class="publication-entry{% if page.extra.award %} has-award{% endif %}">
+      {% if page.extra.award %}
+        {% set entry_class = "publication-entry has-award" %}
+      {% else %}
+        {% set entry_class = "publication-entry" %}
+      {% endif %}
+      <li class="{{ entry_class }}">
         {% if page.extra.award %}
           <div class="pub-award-badge">
-            <img src="{{ get_url(path='best-paper-badge.png') }}" alt="{{ page.extra.award }}" />
+            <img
+              src="{{ get_url(path='best-paper-badge.png') }}"
+              alt="{{ page.extra.award }}"
+            />
           </div>
         {% endif %}
         <div class="pub-content">
-          <strong>{{ page.title }}</strong>
+          <strong class="pub-title">{{ page.title }}</strong>
           <br />
           <span class="pub-authors">
             {%- for author in page.extra.authors -%}
@@ -20,13 +28,18 @@
               {%- else -%}
                 {{ author }}
               {%- endif -%}
-              {%- if not loop.last %}, {% endif -%}
+              {%- if not loop.last %}{{ ", " }}{% endif -%}
             {%- endfor -%}
           </span>
           <br />
-          <em>{{ page.extra.venue_full }}
-            ({% if page.extra.venue_url %}<a href="{{ page.extra.venue_url }}">{{ page.extra.venue }}</a>{% else %}{{ page.extra.venue }}{% endif %})
-          </em>, {{ page.extra.year }}
+          <em
+            >{{ page.extra.venue_full }}
+            ({% if page.extra.venue_url %}
+              <a href="{{ page.extra.venue_url }}">{{ page.extra.venue }}</a>
+            {% else %}
+              {{ page.extra.venue }}
+            {% endif %})</em
+          >, {{ page.extra.year }}
           {% if page.extra.award %}
             <strong class="pub-award-text">[{{ page.extra.award }}]</strong>
           {% endif %}

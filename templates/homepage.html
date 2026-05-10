@@ -4,11 +4,21 @@
   <main>
     <article>
       <div class="homepage-hero">
-        <img src="{{ get_url(path='avatar.png') }}" alt="{{ config.title }}" class="homepage-hero-avatar" />
-        <h1 class="homepage-hero-title">{{ config.title }}</h1>
-        <p class="homepage-hero-subtitle">{{ config.extra.subtitle }}</p>
+        <div class="homepage-hero-image">
+          <img
+            src="{{ get_url(path='avatar.png') }}"
+            alt="{{ config.title }}"
+            class="homepage-hero-avatar"
+          />
+        </div>
+        <div class="homepage-hero-copy">
+          <p class="homepage-hero-kicker">
+            GPU systems · compilers · heterogeneous computing
+          </p>
+          <h1 class="homepage-hero-title">{{ config.title }}</h1>
+          <p class="homepage-hero-subtitle">{{ config.extra.subtitle }}</p>
+        </div>
       </div>
-      <hr />
       <section class="body">{{ section.content | safe }}</section>
     </article>
   </main>

@@ -8,17 +8,18 @@ Personal academic portfolio site for Yanwen Xu, built with [Zola](https://www.ge
 
 ## Commands
 
-Zola is not installed locally; use podman with the container image:
+Use Zola 0.22.1 or newer:
 
-- **Build site:** `podman run -v $PWD:/app:Z --workdir /app ghcr.io/getzola/zola:v0.19.1 build`
-- **Dev server:** `podman run -v $PWD:/app:Z --workdir /app -p 8080:8080 ghcr.io/getzola/zola:v0.19.1 serve --interface 0.0.0.0 --port 8080 --base-url localhost`
-- **Check links:** `podman run -v $PWD:/app:Z --workdir /app ghcr.io/getzola/zola:v0.19.1 check`
+- **Build site:** `zola build`
+- **Dev server:** `zola serve --interface 0.0.0.0 --port 8080 --base-url localhost`
+- **Check internal links:** `zola check --skip-external-links`
+- **Check internal and external links:** `zola check`
 - **Format templates:** `npx prettier --write templates/` (uses prettier-plugin-jinja-template)
-- **Clean build artifacts:** `podman unshare rm -rf public` (needed since podman builds as root)
+- **Clean build artifacts:** `rm -rf public`
 
 ## Deployment
 
-Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`) using `shalzz/zola-deploy-action@v0.21.0`.
+Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`) using `shalzz/zola-deploy-action@v0.22.1`.
 
 ## Architecture
 

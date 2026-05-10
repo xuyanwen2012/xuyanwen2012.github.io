@@ -1,6 +1,6 @@
 +++
 title = "BetterTogether"
-description = "A framework for fine-grained software pipelining on edge SoCs that models hardware interference to optimize performance across heterogeneous CPUs and GPUs."
+description = "An IISWC 2025 Best Paper framework for fine-grained software pipelining on edge SoCs, using interference modeling to coordinate CPUs and GPUs."
 weight = 1
 date = 2025-10-12
 

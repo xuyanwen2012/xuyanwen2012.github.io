@@ -1,6 +1,6 @@
 +++
 title = "Redwood"
-description = "A programming framework that accelerates tree-traversal workloads by dynamically balancing tasks between CPUs and hardware accelerators in shared-memory systems."
+description = "A portable programming framework for accelerating tree-traversal workloads by balancing work between CPUs and accelerators in shared-memory systems."
 weight = 2
 date = 2000-01-01
 

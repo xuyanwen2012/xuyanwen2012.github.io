@@ -10,6 +10,11 @@
   {% endif %}
   {% set header_image = resize_image(path=header_image_path, width=1200, op="fit_width", format="webp", quality=85) %}
   <div class="page-header-image">
-    <img src="{{ header_image.url }}" alt="{{ section.title }}" loading="lazy" decoding="async" />
+    <img
+      src="{{ header_image.url }}"
+      alt="{{ section.title }}"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
 {% endif %}

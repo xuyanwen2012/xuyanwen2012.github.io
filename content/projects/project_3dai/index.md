@@ -1,6 +1,6 @@
 +++
 title = "Interactive Generative 3D Shapes"
-description = "A Three.js implementation of the ShrinkWrap algorithm for 3D shape parameterization."
+description = "An interactive Three.js and PyTorch prototype for exploring generative 3D shape parameterization with the ShrinkWrap algorithm."
 weight = 5
 date = 2020-01-01
 
