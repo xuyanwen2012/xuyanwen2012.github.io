@@ -1,14 +1,13 @@
 {% extends "base.html" %}
-{% import "macros/components.html" as components %}
 
-{% macro talk_posts(pages) %}
+{% component talk_posts(pages: array, section: map) %}
   <div class="talks-grid">
     {%- for page in pages %}
       <div class="talk-card">
         <!-- Either link to the video or to the static page  -->
-        {% if page.extra.video.link %}
-          {% set video_link = page.extra.video.link %}
-        {% elif page.extra.link_to %}
+        {% if page.extra?.video?.link %}
+          {% set video_link = page.extra?.video?.link %}
+        {% elif page.extra?.link_to %}
           {% set video_link = page.extra.link_to %}
         {% else %}
           {% set video_link = page.permalink | safe %}
@@ -24,7 +23,7 @@
             {# Check for YouTube video thumbnail support #}
             {%- set youtube_thumbnail = "" -%}
             {%- set youtube_video_id = "" -%}
-            {%- if page.extra.video and page.extra.video.link -%}
+            {%- if page.extra?.video?.link -%}
               {%- set video_url = page.extra.video.link -%}
               {%- set video_id = "" -%}
               {# Extract video ID from YouTube URL #}
@@ -76,12 +75,12 @@
               {# Generate YouTube thumbnail URL if video ID was extracted #}
               {%- if video_id != "" -%}
                 {%- set youtube_video_id = video_id -%}
-                {%- set thumbnail_quality = page.extra.video.thumbnail_quality | default(value="maxresdefault") -%}
+                {%- set thumbnail_quality = page.extra.video?.thumbnail_quality or "maxresdefault" -%}
                 {%- set youtube_thumbnail = "https://img.youtube.com/vi/" ~ video_id ~ "/" ~ thumbnail_quality ~ ".jpg" -%}
               {%- endif -%}
             {%- endif -%}
 
-            {% if page.extra.video.thumbnail %}
+            {% if page.extra?.video?.thumbnail %}
               {# Use custom thumbnail with responsive srcset #}
               {% set image_sm = resize_image(path=page.extra.video.thumbnail, width=320, height=180, format="webp") %}
               {% set image_md = resize_image(path=page.extra.video.thumbnail, width=640, height=360, format="webp") %}
@@ -98,7 +97,7 @@
                 sizes="(max-width: 640px) 100vw,
                        (max-width: 1024px) 50vw,
                        33vw"
-                alt="{{ page.extra.video.thumbnail.alt | default(value='Thumbnail for the talk') }}"
+                alt="{{ page.extra.video?.alt or 'Thumbnail for the talk' }}"
                 src="{{ image_md.url }}"
               />
               <div class="video-play-btn">
@@ -154,10 +153,7 @@
                 </div>
               </div>
             {% else %}
-              {%
-                set image = resize_image(path='images/talks/default.webp', width=480, height=270, format="webp",
-                quality=10)
-              %}
+              {% set image = resize_image(path='images/talks/default.webp', width=480, height=270, format="webp", quality=10) %}
               <img
                 class="talk-image"
                 alt="Placeholder image for the talk"
@@ -169,9 +165,9 @@
 
         <div class="talk-info">
           <h1 class="talk-title">
-            {% if page.extra.link_to %}
+            {% if page.extra?.link_to %}
               <a href="{{ page.extra.link_to }}">{{ page.title }}</a>
-            {% elif page.extra.video.link %}
+            {% elif page.extra?.video?.link %}
               <a href="{{ page.extra.video.link }}">{{ page.title }}</a>
             {% else %}
               <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
@@ -189,28 +185,19 @@
 
           <div class="meta">
             {%- if page.date %}
-              {{
-                components::icon_button(href="#", text=page.date | date(format="%B %d, %Y") , icon="calendar",
-                disabled=true, icon_path="icons/")
-              }}
+              {{ <ui.icon_button href="#" text={page.date | date(format="%B %d, %Y")} icon="calendar" disabled={true} icon_path="icons/" /> }}
             {% endif -%}
 
-            {% if page.extra.organizer.name and page.extra.organizer.link %}
-              {{
-                components::icon_button(href=page.extra.organizer.link, text=page.extra.organizer.name,
-                icon="map-pin", icon_path="icons/")
-              }}
+            {% if page.extra?.organizer?.name and page.extra?.organizer?.link %}
+              {{ <ui.icon_button href={page.extra.organizer.link} text={page.extra.organizer.name} icon="map-pin" icon_path="icons/" /> }}
             {% endif %}
 
-            {% if page.extra.slides %}
-              {{
-                components::icon_button(href=page.extra.slides, text="Slides", icon="presentation",
-                icon_path="icons/")
-              }}
+            {% if page.extra?.slides %}
+              {{ <ui.icon_button href={page.extra.slides} text="Slides" icon="presentation" icon_path="icons/" /> }}
             {% endif %}
 
-            {% if page.extra.code %}
-              {{ components::icon_button(href=page.extra.code, text="Code", icon="code", icon_path="icons/") }}
+            {% if page.extra?.code %}
+              {{ <ui.icon_button href={page.extra.code} text="Code" icon="code" icon_path="icons/" /> }}
             {% endif %}
 
             {% if page.draft %}
@@ -221,15 +208,17 @@
       </div>
     {% endfor -%}
   </div>
-{% endmacro talk_posts %}
+{% endcomponent talk_posts %}
 
 {% block main_content %}
-  {% if section.extra.section_path -%}
+  {% if section.extra?.section_path -%}
     {% set section = get_section(path=section.extra.section_path) %}
   {% endif -%}
   {% include "partials/header_image.html" %}
 
-  {{ post_macros::page_header(title=section.title) }}
+  {% if section.title %}
+    {{ <post.page_header title={section.title} /> }}
+  {% endif %}
 
   {% if section.content %}
     <div class="section-content">{{ section.content | safe }}</div>
@@ -242,7 +231,7 @@
       {%- set show_pages = section.pages -%}
     {% endif -%}
 
-    {{ self::talk_posts(pages=show_pages) }}
+    {{ <talk_posts pages={show_pages} section={section} /> }}
   </main>
 
   {% include "partials/pagination.html" %}

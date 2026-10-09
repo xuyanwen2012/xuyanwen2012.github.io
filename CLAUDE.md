@@ -8,7 +8,7 @@ Personal academic portfolio site for Yanwen Xu, built with [Zola](https://www.ge
 
 ## Commands
 
-Use Zola 0.22.x (CI pins 0.22.1). Zola 0.23+ does not build this site: its new Tera version drops `{% macro %}`, which Apollo and these templates rely on. Override the binary with `just zola=/path/to/zola build` if your default `zola` is newer.
+Use the latest Zola (0.23 or newer; CI is not pinned). Templates use Tera v2: components (`{% component %}` / `{{<name arg={value} />}}`) instead of macros, and `?.` for fields that may be undefined (e.g. `page.extra?.github`).
 
 - **Build site:** `zola build`
 - **Dev server:** `zola serve --interface 0.0.0.0 --port 8080 --base-url localhost`
@@ -19,7 +19,7 @@ Use Zola 0.22.x (CI pins 0.22.1). Zola 0.23+ does not build this site: its new T
 
 ## Deployment
 
-Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`) using `shalzz/zola-deploy-action@v0.22.1`.
+Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`) using `shalzz/zola-deploy-action@master`, which tracks the latest Zola release.
 
 ## Architecture
 
@@ -35,14 +35,16 @@ All content lives in `content/` as Markdown files with TOML frontmatter (`+++` d
 
 ### Templates
 
-Templates extend the Apollo theme's `base.html` and live in `templates/`:
+Templates live in `templates/` and override the Apollo theme's file of the same path:
 
 - **`homepage.html`** — hero (avatar resized to WebP via `resize_image()`) plus `_index.md` content
-- **`cards.html`** — grid layout for sections (projects). Implements column-balanced reordering so items fill columns evenly. Supports `local_image`, `remote_image`, `local_video`, `remote_video` in page `[extra]`. Converts non-GIF images to WebP via `resize_image()`.
+- **`cards.html`** — grid layout for sections (projects). Supports `local_image`, `remote_image`, `local_video`, `remote_video` in page `[extra]`. Relative `local_image` paths resolve against the page's own directory. Converts non-GIF images to WebP at 2x the card height via `resize_image()` (always pass `quality`: Zola's WebP output is lossless without it).
 - **`publications.html`** — publication list with structured metadata (authors, venue, links)
 - **`talks.html`** — override of Apollo's talk/video grid with YouTube thumbnail extraction and responsive srcset; used by the games section
 - **`sitemap.xml`** — Zola's default sitemap minus pages flagged `extra.noindex`
-- **`partials/header.html`** — `<head>`: meta/OG tags, canonical URL, resized `og:image`, `noindex` handling
+- **`base.html`** — Apollo's base layout plus the site footer
+- **`apollo/head_end.html`** — Apollo's hook for extra `<head>` tags: resized `og:image`, favicon (cut from `og_image` unless `extra.favicon` is set), canonical URL, `noindex` handling, homepage JSON-LD `Person` built from `config.extra.socials`
+- **`partials/nav.html`** — Apollo's nav, with PDF menu links opening in a new tab
 - **`page.html`** — individual page layout with optional header image, date, tags, authors
 
 ### Theme
@@ -61,4 +63,4 @@ Set `noindex = true` in `[extra]` on pages that only feed a list or card view an
 
 ## Config
 
-`config.toml` defines: base URL, Sass compilation, Apollo theme, nav menu items, and social links. The `[extra]` section controls theme toggle and site navigation.
+`config.toml` defines: base URL, Sass compilation, Apollo theme, nav menu items, and social links. The `[extra]` section controls theme toggle and site navigation. `[extra.analytics]` must stay defined (Apollo's header reads it unconditionally).

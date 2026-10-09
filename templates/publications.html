@@ -1,16 +1,15 @@
 {% extends "base.html" %}
-{% import "macros/macros.html" as post_macros %}
 
-{% macro pub_list(pages) %}
+{% component pub_list(pages: array) %}
   <ul class="publications-list">
     {%- for page in pages %}
-      {% if page.extra.award %}
+      {% if page.extra?.award %}
         {% set entry_class = "publication-entry has-award" %}
       {% else %}
         {% set entry_class = "publication-entry" %}
       {% endif %}
       <li class="{{ entry_class }}">
-        {% if page.extra.award %}
+        {% if page.extra?.award %}
           <div class="pub-award-badge">
             <img
               src="{{ get_url(path='best-paper-badge.png') }}"
@@ -34,33 +33,33 @@
           <br />
           <em
             >{{ page.extra.venue_full }}
-            ({% if page.extra.venue_url %}
+            ({%- if page.extra?.venue_url -%}
               <a href="{{ page.extra.venue_url }}">{{ page.extra.venue }}</a>
-            {% else %}
+            {%- else -%}
               {{ page.extra.venue }}
-            {% endif %})</em
+            {%- endif -%})</em
           >, {{ page.extra.year }}
-          {% if page.extra.award %}
+          {% if page.extra?.award %}
             <strong class="pub-award-text">[{{ page.extra.award }}]</strong>
           {% endif %}
           <br />
           <span class="pub-links">
-            {%- if page.extra.pdf %}
+            {%- if page.extra?.pdf %}
               <a href="{{ page.extra.pdf }}">pdf</a>
             {% endif -%}
-            {%- if page.extra.slides %}
+            {%- if page.extra?.slides %}
               <a href="{{ page.extra.slides }}">slides</a>
             {% endif -%}
-            {%- if page.extra.poster %}
+            {%- if page.extra?.poster %}
               <a href="{{ page.extra.poster }}">poster</a>
             {% endif -%}
-            {%- if page.extra.video %}
+            {%- if page.extra?.video %}
               <a href="{{ page.extra.video }}">video</a>
             {% endif -%}
-            {%- if page.extra.code %}
+            {%- if page.extra?.code %}
               <a href="{{ page.extra.code }}">code</a>
             {% endif -%}
-            {%- if page.extra.doi %}
+            {%- if page.extra?.doi %}
               <a href="{{ page.extra.doi }}">DOI</a>
             {% endif -%}
           </span>
@@ -68,12 +67,14 @@
       </li>
     {% endfor -%}
   </ul>
-{% endmacro pub_list %}
+{% endcomponent pub_list %}
 
 {% block main_content %}
   {% include "partials/header_image.html" %}
 
-  {{ post_macros::page_header(title=section.title) }}
+  {% if section.title %}
+    {{ <post.page_header title={section.title} /> }}
+  {% endif %}
 
   <main>
     {%- if paginator %}
@@ -82,7 +83,7 @@
       {%- set show_pages = section.pages -%}
     {% endif -%}
 
-    {{ self::pub_list(pages=show_pages) }}
+    {{ <pub_list pages={show_pages} /> }}
   </main>
 
   {% if section.content %}

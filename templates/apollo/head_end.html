@@ -1,0 +1,45 @@
+{# Site-specific <head> additions, included by Apollo's partials/header.html #}
+
+{# Open Graph image: resized so link previews don't fetch the full-size original #}
+{% if config.extra?.og_image %}
+  {% set og_image = resize_image(path=config.extra.og_image, width=600, op="fit_width", format="jpg", quality=85) %}
+  <meta property="og:image" content="{{ og_image.url | safe }}" />
+{% endif %}
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+
+{# Favicon, cut from the same image as og:image #}
+{% if config.extra?.og_image and not config.extra?.favicon %}
+  {% set icon = resize_image(path=config.extra.og_image, width=64, height=64, op="fill", format="png") %}
+  {% set touch_icon = resize_image(path=config.extra.og_image, width=180, height=180, op="fill", format="png") %}
+  <link rel="icon" type="image/png" href="{{ icon.url | safe }}" />
+  <link rel="apple-touch-icon" href="{{ touch_icon.url | safe }}" />
+{% endif %}
+
+{# Pages that only feed list/card views stay out of search indexes #}
+{% if page?.extra?.noindex %}
+  <meta name="robots" content="noindex" />
+{% endif %}
+
+{# Canonical URL #}
+{% if page?.permalink %}
+  {% set canonical_url = page.permalink %}
+{% elif section?.permalink %}
+  {% set canonical_url = section.permalink %}
+{% endif %}
+{% if canonical_url %}
+  <link rel="canonical" href="{{ canonical_url | safe }}" />
+  <meta property="og:url" content="{{ canonical_url | safe }}" />
+{% endif %}
+
+{# Structured data so search engines can tie the homepage to the profiles in config.extra.socials #}
+{% if section?.path == "/" %}
+  {% set profiles = [social.url for social in config.extra.socials if social.icon != "email"] %}
+  {% set person = {"@context": "https://schema.org", "@type": "Person", "name": config.title, "url": config.base_url, "description": config.description, "sameAs": profiles} %}
+  {% if og_image %}
+    {% set person = {...person, "image": og_image.url} %}
+  {% endif %}
+  {# Assembled as a string: Prettier cannot parse a template expression inside a JSON <script> #}
+  {% set json_ld = '<script type="application/ld+json">' ~ (person | json_encode) ~ "</script>" %}
+  {{ json_ld | safe }}
+{% endif %}

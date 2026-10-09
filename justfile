@@ -1,4 +1,3 @@
-# Requires Zola 0.22.x (0.23+ breaks the templates). Override with: just zola=/path/to/zola build
 zola := "zola"
 
 # Build the site

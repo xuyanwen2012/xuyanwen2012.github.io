@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% macro home_page(section) %}
+{% block main_content %}
   <main>
     <article>
       <div class="homepage-hero">
@@ -27,8 +27,4 @@
       <section class="body">{{ section.content | safe }}</section>
     </article>
   </main>
-{% endmacro home_page %}
-
-{% block main_content %}
-  {{ self::home_page(section=section) }}
 {% endblock main_content %}

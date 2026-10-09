@@ -30,7 +30,7 @@
 
   <div class="right-nav">
     {% for menu in config.extra.menu %}
-      {% if menu.url is ending_with(".pdf") %}
+      {% if menu.url is ending_with(pat=".pdf") %}
         <a
           href="{{ get_url(path=menu.url) }}"
           target="_blank"
@@ -98,7 +98,8 @@
       </div>
     {% endif %}
 
-    {% if config.extra.theme == "toggle" %}
+    {% set theme = config.extra.theme | default(value="toggle") %}
+    {% if theme == "toggle" or theme == "toggle-auto" %}
       <a
         id="dark-mode-toggle"
         onclick="toggleTheme(); event.preventDefault();"
@@ -115,12 +116,14 @@
           style="filter: invert(1)"
           alt="Dark"
         />
-        <img
-          src="{{ get_url(path='icons/auto.svg') }}"
-          id="auto-icon"
-          style="filter: invert(1)"
-          alt="Auto"
-        />
+        {% if theme == "toggle-auto" %}
+          <img
+            src="{{ get_url(path='icons/auto.svg') }}"
+            id="auto-icon"
+            style="filter: invert(1)"
+            alt="Auto"
+          />
+        {% endif %}
       </a>
 
       <!-- Initialize the theme toggle icons -->

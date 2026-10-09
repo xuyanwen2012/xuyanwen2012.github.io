@@ -34,3 +34,7 @@ socials = [
     { name = "orcid", url = "https://orcid.org/0009-0001-6750-9798", icon = "orcid" },
     { name = "email", url = "mailto:yanwen.xu@samsung.com", icon = "email" },
 ]
+
+# Apollo's header template reads this table unconditionally
+[extra.analytics]
+enabled = false

@@ -1,6 +1,6 @@
-{% if section.extra.header_image %}
+{% if section.extra?.header_image %}
   {% set header_image_path = section.extra.header_image %}
-  {% if header_image_path is not starting_with("/") %}
+  {% if header_image_path is not starting_with(pat="/") %}
     {% set section_dir = section.path %}
     {% if section_dir %}
       {% set header_image_path = section_dir ~ "/" ~ section.extra.header_image %}
