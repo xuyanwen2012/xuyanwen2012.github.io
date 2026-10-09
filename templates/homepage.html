@@ -5,10 +5,15 @@
     <article>
       <div class="homepage-hero">
         <div class="homepage-hero-image">
+          {# 2x the largest CSS display size (210px) #}
+          {% set avatar = resize_image(path="avatar.png", width=420, height=420, op="fill", format="webp", quality=85) %}
           <img
-            src="{{ get_url(path='avatar.png') }}"
+            src="{{ avatar.url }}"
             alt="{{ config.title }}"
             class="homepage-hero-avatar"
+            width="420"
+            height="420"
+            decoding="async"
           />
         </div>
         <div class="homepage-hero-copy">

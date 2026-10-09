@@ -8,22 +8,11 @@ build_search_index = false
 
 theme = "apollo"
 
-[search]
-include_title = true
-include_description = true
-include_path = true
-include_content = true
-index_format = "elasticlunr_json"
-
-[markdown]
-
 [markdown.highlighting]
 light_theme = "github-light"
 dark_theme = "github-dark"
 
-
 [extra]
-
 theme = "toggle"
 stylesheets = ["custom.css"]
 subtitle = "Ph.D. in CSE @ UC Santa Cruz && GPU Engineer @ Samsung"

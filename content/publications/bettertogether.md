@@ -4,6 +4,7 @@ weight = 1
 date = 2025-10-12
 
 [extra]
+noindex = true
 authors = ["Yanwen Xu", "R. Sharma", "Z. Chen", "S. Mistry", "T. Sorensen"]
 venue = "IISWC"
 venue_full = "IEEE International Symposium on Workload Characterization"

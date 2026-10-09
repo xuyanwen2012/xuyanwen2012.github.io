@@ -4,6 +4,7 @@ weight = 3
 date = 2023-06-01
 
 [extra]
+noindex = true
 authors = ["Yanwen Xu", "A. Li", "T. Sorensen"]
 venue = "OSCAR"
 venue_full = "Open-Source Computer Architecture Research Workshop"

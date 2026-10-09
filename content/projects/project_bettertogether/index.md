@@ -2,9 +2,9 @@
 title = "BetterTogether"
 description = "An IISWC 2025 Best Paper framework for fine-grained software pipelining on edge SoCs, using interference modeling to coordinate CPUs and GPUs."
 weight = 1
-date = 2025-10-12
 
 [extra]
+noindex = true
 local_image = "bettertogether.png"
 github = "https://github.com/ucsc-redwood/better-together"
 tags = ["iiswc2025", "openmp", "cuda", "vulkan"]

@@ -8,7 +8,7 @@ Personal academic portfolio site for Yanwen Xu, built with [Zola](https://www.ge
 
 ## Commands
 
-Use Zola 0.22.1 or newer:
+Use Zola 0.22.x (CI pins 0.22.1). Zola 0.23+ does not build this site: its new Tera version drops `{% macro %}`, which Apollo and these templates rely on. Override the binary with `just zola=/path/to/zola build` if your default `zola` is newer.
 
 - **Build site:** `zola build`
 - **Dev server:** `zola serve --interface 0.0.0.0 --port 8080 --base-url localhost`
@@ -30,19 +30,20 @@ All content lives in `content/` as Markdown files with TOML frontmatter (`+++` d
 - `_index.md` — homepage (uses `template = "homepage.html"`, contains inline HTML/CSS for the hero section)
 - `projects/` — research project cards, sorted by `weight`. Each project is a directory with co-located assets (`index.md` + images).
 - `publications/` — structured publication entries, sorted by `weight`. Each publication has frontmatter with `authors`, `venue`, `year`, `pdf`, `doi`, etc.
-- `games/` — game portfolio cards
+- `games/` — game portfolio entries, rendered by `talks.html` (uses `[extra]` `video = { link, thumbnail_quality }` and `code`)
 - `teaching.md` — teaching info (standalone page)
 
 ### Templates
 
 Templates extend the Apollo theme's `base.html` and live in `templates/`:
 
-- **`homepage.html`** — renders `_index.md` content directly
+- **`homepage.html`** — hero (avatar resized to WebP via `resize_image()`) plus `_index.md` content
 - **`cards.html`** — grid layout for sections (projects). Implements column-balanced reordering so items fill columns evenly. Supports `local_image`, `remote_image`, `local_video`, `remote_video` in page `[extra]`. Converts non-GIF images to WebP via `resize_image()`.
 - **`publications.html`** — publication list with structured metadata (authors, venue, links)
-- **`talks.html`** — talk/video grid with YouTube thumbnail extraction and responsive srcset
+- **`talks.html`** — override of Apollo's talk/video grid with YouTube thumbnail extraction and responsive srcset; used by the games section
+- **`sitemap.xml`** — Zola's default sitemap minus pages flagged `extra.noindex`
+- **`partials/header.html`** — `<head>`: meta/OG tags, canonical URL, resized `og:image`, `noindex` handling
 - **`page.html`** — individual page layout with optional header image, date, tags, authors
-- **`shortcodes/avatar.html`** — WebP avatar processing shortcode
 
 ### Theme
 
@@ -50,7 +51,9 @@ Apollo theme is a git submodule at `themes/apollo`. Clone with `--recurse-submod
 
 ### Content page frontmatter extras
 
-Project/game cards use these `[extra]` fields: `local_image`, `remote_image`, `local_video`, `remote_video`, `link_to`, `github`, `demo`, `tags`.
+Project cards use these `[extra]` fields: `local_image`, `remote_image`, `local_video`, `remote_video`, `link_to`, `github`, `demo`, `tags`.
+
+Set `noindex = true` in `[extra]` on pages that only feed a list or card view and have no body of their own (all publications, most projects). They still build, but get `<meta name="robots" content="noindex">` and are left out of the sitemap. Do not use `render = false` for this: it removes the page from `section.pages`, emptying the lists.
 
 ### Static assets
 

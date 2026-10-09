@@ -2,7 +2,6 @@
 title = "DECADES"
 description = "Compiler and runtime support for a DARPA-backed reconfigurable many-core system targeting data-intensive heterogeneous acceleration."
 weight = 3
-date = 2023-05-01
 
 [extra]
 local_image = "decades.png"

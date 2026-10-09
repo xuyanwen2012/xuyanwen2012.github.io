@@ -4,6 +4,7 @@ weight = 4
 date = 2022-10-01
 
 [extra]
+noindex = true
 authors = ["Yanwen Xu", "T. Sorensen"]
 venue = "PACT"
 venue_full = "Parallel Architectures and Compilation Techniques, ACM Student Research Competition"

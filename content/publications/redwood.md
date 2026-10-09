@@ -4,6 +4,7 @@ weight = 2
 date = 2023-04-23
 
 [extra]
+noindex = true
 authors = ["Yanwen Xu", "A. Li", "T. Sorensen"]
 venue = "ISPASS"
 venue_full = "IEEE International Symposium on Performance Analysis of Systems and Software"

@@ -72,14 +72,29 @@
     {% endif %}
   {% endif %}
 
-  {# Open Graph image #}
+  {# Open Graph image: resized so link previews don't fetch the full-size original #}
   {% if config.extra.og_image %}
-    <meta
-      property="og:image"
-      content="{{ get_url(path=config.extra.og_image) }}"
-    />
+    {% set og_image = resize_image(path=config.extra.og_image, width=600, op="fit_width", format="jpg", quality=85) %}
+    <meta property="og:image" content="{{ og_image.url | safe }}" />
   {% endif %}
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  {# Pages that only feed list/card views stay out of search indexes #}
+  {% if page.extra.noindex %}
+    <meta name="robots" content="noindex" />
+  {% endif %}
+
+  {# Canonical URL #}
+  {% if page.permalink %}
+    {% set canonical_url = page.permalink %}
+  {% elif section.permalink %}
+    {% set canonical_url = section.permalink %}
+  {% endif %}
+  {% if canonical_url %}
+    <link rel="canonical" href="{{ canonical_url | safe }}" />
+    <meta property="og:url" content="{{ canonical_url | safe }}" />
+  {% endif %}
 
   {# Favicon #}
   {% if config.extra.favicon %}
